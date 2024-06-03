@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./js/jquery.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/mani.js"></script>
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <header>
+    <div class="header">
+      <div class="header_max">
+        <a class="header_logo" href="">
+          <img src="./img/logo.svg" alt="" />
+        </a>
+        <div class="header_box">
+          <div class="header_search">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8.99219 17.9922C7.74219 17.9922 6.57031 17.7578 5.47656 17.2891C4.38281 16.8203 3.42969 16.1797 2.61719 15.3672C1.80469 14.5547 1.16406 13.6016 0.695312 12.5078C0.226562 11.4141 -0.0078125 10.2422 -0.0078125 8.99219C-0.0078125 7.74219 0.226562 6.57031 0.695312 5.47656C1.16406 4.38281 1.80469 3.42969 2.61719 2.61719C3.42969 1.80469 4.38281 1.16406 5.47656 0.695312C6.57031 0.226562 7.74219 -0.0078125 8.99219 -0.0078125C10.2422 -0.0078125 11.4141 0.226562 12.5078 0.695312C13.6016 1.16406 14.5547 1.80469 15.3672 2.61719C16.1797 3.42969 16.8203 4.38281 17.2891 5.47656C17.7578 6.57031 17.9922 7.74219 17.9922 8.99219C17.9922 10.2422 17.7578 11.4141 17.2891 12.5078C16.8203 13.6016 16.1797 14.5547 15.3672 15.3672C14.5547 16.1797 13.6016 16.8203 12.5078 17.2891C11.4141 17.7578 10.2422 17.9922 8.99219 17.9922ZM8.99219 2.00781C8.02344 2.00781 7.10938 2.1875 6.25 2.54688C5.40625 2.90625 4.66797 3.40234 4.03516 4.03516C3.40234 4.66797 2.90625 5.40625 2.54688 6.25C2.1875 7.10938 2.00781 8.02344 2.00781 8.99219C2.00781 9.97656 2.1875 10.8906 2.54688 11.7344C2.90625 12.5938 3.40234 13.3359 4.03516 13.9609C4.66797 14.5859 5.40625 15.0859 6.25 15.4609C7.10938 15.8203 8.02344 16 8.99219 16C9.97656 16 10.8906 15.8203 11.7344 15.4609C12.5938 15.0859 13.3359 14.5859 13.9609 13.9609C14.5859 13.3359 15.0859 12.5938 15.4609 11.7344C15.8203 10.8906 16 9.97656 16 8.99219C16 8.02344 15.8203 7.10938 15.4609 6.25C15.0859 5.40625 14.5859 4.66797 13.9609 4.03516C13.3359 3.40234 12.5938 2.90625 11.7344 2.54688C10.8906 2.1875 9.97656 2.00781 8.99219 2.00781ZM19 20.0078C18.8438 20.0078 18.7148 19.9805 18.6133 19.9258C18.5117 19.8711 18.4062 19.7969 18.2969 19.7031L14.0078 15.3906C13.8047 15.2031 13.7031 14.9727 13.7031 14.6992C13.7031 14.4258 13.8047 14.1953 14.0078 14.0078C14.1953 13.8047 14.4258 13.7031 14.6992 13.7031C14.9727 13.7031 15.2031 13.8047 15.3906 14.0078L19.7031 18.2969C19.9062 18.5 20.0078 18.7344 20.0078 19C20.0078 19.2656 19.9062 19.5 19.7031 19.7031C19.5938 19.7969 19.4883 19.8711 19.3867 19.9258C19.2852 19.9805 19.1562 20.0078 19 20.0078Z" fill="black" />
+            </svg>
+            <span>Search</span>
+          </div>
+          <div class="header_menu">
+            <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 8.00781H1C0.703125 8.00781 0.460938 7.91406 0.273438 7.72656C0.0859375 7.53906 -0.0078125 7.29688 -0.0078125 7C-0.0078125 6.70312 0.0859375 6.46094 0.273438 6.27344C0.460938 6.08594 0.703125 5.99219 1 5.99219H19C19.2969 5.99219 19.5391 6.08594 19.7266 6.27344C19.9141 6.46094 20.0078 6.70312 20.0078 7C20.0078 7.29688 19.9141 7.53906 19.7266 7.72656C19.5391 7.91406 19.2969 8.00781 19 8.00781ZM19 2.00781H1C0.703125 2.00781 0.460938 1.91406 0.273438 1.72656C0.0859375 1.53906 -0.0078125 1.29688 -0.0078125 1C-0.0078125 0.703125 0.0859375 0.460938 0.273438 0.273438C0.460938 0.0859375 0.703125 -0.0078125 1 -0.0078125H19C19.2969 -0.0078125 19.5391 0.0859375 19.7266 0.273438C19.9141 0.460938 20.0078 0.703125 20.0078 1C20.0078 1.29688 19.9141 1.53906 19.7266 1.72656C19.5391 1.91406 19.2969 2.00781 19 2.00781ZM19 14.0078H1C0.703125 14.0078 0.460938 13.9141 0.273438 13.7266C0.0859375 13.5391 -0.0078125 13.2969 -0.0078125 13C-0.0078125 12.7031 0.0859375 12.4609 0.273438 12.2734C0.460938 12.0859 0.703125 11.9922 1 11.9922H19C19.2969 11.9922 19.5391 12.0859 19.7266 12.2734C19.9141 12.4609 20.0078 12.7031 20.0078 13C20.0078 13.2969 19.9141 13.5391 19.7266 13.7266C19.5391 13.9141 19.2969 14.0078 19 14.0078Z" fill="black" />
+            </svg>
+            <span>Menu</span>
+          </div>
+          <div class="header_button">
+            <span> Become a Member</span>
+            <span class="arrow">
+              <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_28_192)">
+                  <path d="M1.71855 10.1333C1.71855 9.85948 1.82719 9.59692 2.02059 9.40334C2.21399 9.20975 2.47629 9.101 2.7498 9.101L16.7645 9.101L15.4239 7.76938C15.2297 7.57501 15.1206 7.31137 15.1206 7.03648C15.1206 6.76159 15.2297 6.49796 15.4239 6.30358C15.618 6.1092 15.8814 6 16.156 6C16.4307 6 16.694 6.1092 16.8882 6.30358L19.982 9.40035C20.1251 9.54551 20.222 9.72985 20.2606 9.93009C20.2991 10.1303 20.2775 10.3375 20.1985 10.5255C20.1212 10.714 19.9898 10.8754 19.821 10.9893C19.6521 11.1032 19.4534 11.1645 19.2498 11.1655L2.7498 11.1655C2.47629 11.1655 2.21399 11.0568 2.02059 10.8632C1.82719 10.6696 1.71855 10.407 1.71855 10.1333Z" fill="#007DFF" />
+                  <path d="M15.1248 13.2299C15.124 13.0941 15.15 12.9594 15.2014 12.8336C15.2527 12.7079 15.3283 12.5935 15.4239 12.497L18.5176 9.40026C18.7118 9.20588 18.9752 9.09668 19.2498 9.09668C19.3858 9.09668 19.5204 9.12349 19.6461 9.17558C19.7717 9.22766 19.8858 9.30401 19.982 9.40026C20.0781 9.4965 20.1544 9.61076 20.2065 9.73652C20.2585 9.86227 20.2853 9.99705 20.2853 10.1332C20.2853 10.4081 20.1762 10.6717 19.982 10.8661L16.8882 13.9628C16.7924 14.0596 16.6783 14.1364 16.5527 14.1888C16.427 14.2412 16.2922 14.2682 16.1561 14.2682C16.0199 14.2682 15.8851 14.2412 15.7595 14.1888C15.6338 14.1364 15.5197 14.0596 15.4239 13.9628C15.3283 13.8664 15.2527 13.752 15.2014 13.6262C15.15 13.5005 15.124 13.3658 15.1248 13.2299Z" fill="#007DFF" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_28_192">
+                    <rect width="20" height="22" fill="white" transform="translate(22) rotate(90)" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="menu">
+    <div class="menu_max">
+      <div class="menu_box">
+        <div class="flex">
+          <div class="menu_logo">
+            <img src="./img/logo.svg" alt="" />
+          </div>
+          <div class="close">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11.7017 10.8615C11.7568 10.9167 11.8006 10.9822 11.8304 11.0542C11.8603 11.1263 11.8757 11.2036 11.8757 11.2816C11.8757 11.3596 11.8603 11.4368 11.8304 11.5089C11.8006 11.581 11.7568 11.6465 11.7017 11.7017C11.6465 11.7568 11.581 11.8006 11.5089 11.8304C11.4368 11.8603 11.3596 11.8757 11.2816 11.8757C11.2036 11.8757 11.1263 11.8603 11.0542 11.8304C10.9822 11.8006 10.9167 11.7568 10.8615 11.7017L5.93783 6.77724L1.01416 11.7017C0.902747 11.8131 0.75164 11.8757 0.59408 11.8757C0.43652 11.8757 0.285414 11.8131 0.174002 11.7017C0.0625904 11.5902 3.10588e-09 11.4391 0 11.2816C-3.10588e-09 11.124 0.0625904 10.9729 0.174002 10.8615L5.09842 5.93783L0.174002 1.01416C0.0625904 0.902747 -1.17391e-09 0.75164 0 0.59408C1.17391e-09 0.43652 0.0625904 0.285414 0.174002 0.174002C0.285414 0.0625904 0.43652 1.17391e-09 0.59408 0C0.75164 -1.17391e-09 0.902747 0.0625904 1.01416 0.174002L5.93783 5.09842L10.8615 0.174002C10.9729 0.0625904 11.124 -3.10588e-09 11.2816 0C11.4391 3.10588e-09 11.5902 0.0625904 11.7017 0.174002C11.8131 0.285414 11.8757 0.43652 11.8757 0.59408C11.8757 0.75164 11.8131 0.902747 11.7017 1.01416L6.77724 5.93783L11.7017 10.8615Z" fill="black" />
+            </svg>
+          </div>
+        </div>
+        <ul class="menu_nav">
+          <li class="menu_item">
+            <div class="flex_gap">
+              <a href="">About Icc</a>
+              <span class="arrow"></span>
+            </div>
+          </li>
+          <li class="menu_item">
+            <div class="flex_gap">
+              <a href="">Area of work</a>
+              <span class="arrow"></span>
+            </div>
+            <ul class="sub-menu">
+              <li>
+                <a href="">Commissions</a>
+              </li>
+              <li>
+                <a href="">Products & Services</a>
+              </li>
+              <li>
+                <a href="">Discover SME360X</a>
+              </li>
+              <li>
+                <a href="">ICC Network</a>
+              </li>
+              <li>
+                <a href="">ICC Partnership</a>
+              </li>
+              <li>
+                <a href="">Special Projects</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu_item">
+            <div class="flex_gap">
+              <a href="">Icc Global</a>
+              <span class="arrow"></span>
+            </div>
+          </li>
+          <li class="menu_item">
+            <div class="flex_gap">
+              <a href="">News & media</a>
+              <span class="arrow"></span>
+            </div>
+          </li>
+          <li class="menu_item">
+            <div class="flex_gap">
+              <a href="">events</a>
+              <span class="arrow"></span>
+            </div>
+          </li>
+          <li class="menu_item">
+            <div class="flex_gap">
+                <a href="">events</a>
+                <span class="arrow"></span>
+            </div>
+          </li>
+          <li class="menu_item">
+            <div class="flex_gap">
+              <a href="">gallery</a>
+            </div>
+          </li>
+          <li class="menu_item">
+            <div class="flex_gap">
+              <a href="">Newsroom</a>
+            </div>
+          </li>
+          <li class="menu_item">
+            <div class="flex_gap">
+              <a href="">Contact Us</a>
+            </div>
+          </li>
+        </ul>
+        <div class="flex_bottom pt_40">
+          <a href="">
+            <img src="./img/ig.svg" alt="" />
+          </a>
+          <a href="">
+            <img src="./img/Facebook.svg" alt="" />
+          </a>
+          <a href="">
+            <img src="./img/Twitter.svg" alt="" />
+          </a>
+        </div>
+        <div class="menu_position">
+          <img src="./img/map.png" alt="" />
+        </div>
+      </div>
+      <div class="menu_img">
+        <img src="./img/Menu.png" alt="" />
+      </div>
+    </div>
+  </div>
+  <div class="banner">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="banner_box">
+            <img class="banner_big" src="./img/banner.jpg" alt="" />
+            <div class="container">
+              <div class="banner_text">
+                <div>
+                  <div class="banner_text-one">We are the World Business Organization</div>
+                </div>
+              </div>
+              <div class="banner_small">
+                <img src="./img/qatar_map.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="banner_box">
+            <img class="banner_big" src="./img/banner1.jpg" alt="" />
+            <div class="container">
+              <div class="banner_text">
+                <div>
+                  <div class="banner_text-one">Small Business and Entrepreneurship</div>
+                  <div class="banner_text-two">As the voice of the real economy we deliver tools and services that enable SMEs to
+                    survive and thrive.</div>
+                  <a class="banner_text-three" href="">
+                    <span>Learn More</span>
+                    <span class="arrow"></span>
+                  </a>
+                </div>
+              </div>
+              <div class="banner_small">
+                <img src="./img/qatar_map.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="banner_box">
+            <img class="banner_big" src="./img/banner2.jpg" alt="" />
+            <div class="container">
+              <div class="banner_text">
+                <div>
+                  <div class="banner_text-one">World Chambers Federation</div>
+                  <div class="banner_text-two">Our WCF is a non-political, non-governmental body providing a platform for chamber leaders to connect, inspire and
+                    strengthen links among chambers.</div>
+                  <a class="banner_text-three" href="">
+                    <span>Learn More</span>
+                    <span class="arrow"></span>
+                  </a>
+                </div>
+              </div>
+              <div class="banner_small">
+                <img src="./img/qatar_map.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="banner_box">
+            <img class="banner_big" src="./img/banner3.jpg" alt="" />
+            <div class="container">
+              <div class="banner_text">
+                <div>
+                  <div class="banner_text-one">ICC Dispute Resolution Services</div>
+                  <div class="banner_text-two">Dispute Resolution Services, including ICC Arbitration and dispute avoidance tools, ensure that when disputes arise, they are resolved quickly and efficiently. This allows parties to focus on their core business priorities with complete peace of mind, thanks to cost and process transparency, security and confidentiality.</div>
+                  <a class="banner_text-three" href="">
+                    <span>Learn More</span>
+                    <span class="arrow"></span>
+                  </a>
+                </div>
+              </div>
+              <div class="banner_small">
+                <img src="./img/qatar_map.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="button-prev">
+        <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="38" width="37" height="37" rx="18.5" transform="rotate(-90 1 38)" stroke="white" stroke-width="2"/>
+            <path d="M23.916 28.897C24.0755 28.897 24.2388 28.8339 24.3613 28.7114C24.6062 28.4665 24.6062 28.0657 24.3613 27.8208L15.9783 19.4378L24.2388 11.1772C24.4838 10.9323 24.4838 10.5315 24.2388 10.2866C23.9939 10.0417 23.5931 10.0417 23.3482 10.2866L14.6386 18.9925C14.3937 19.2374 14.3937 19.6382 14.6386 19.8831L23.467 28.7114C23.5931 28.8376 23.7527 28.897 23.916 28.897Z" fill="white"/>
+        </svg>            
+      </div>
+      <div class="button-next">
+        <svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="37" y="1" width="36.794" height="36" rx="18" transform="rotate(90 37 1)" stroke="white" stroke-width="2"/>
+            <path d="M14.5839 10C14.4243 10 14.261 10.0631 14.1386 10.1855C13.8937 10.4305 13.8937 10.8312 14.1386 11.0762L22.5216 19.4592L14.261 27.7197C14.0161 27.9646 14.0161 28.3654 14.261 28.6104C14.506 28.8553 14.9067 28.8553 15.1517 28.6104L23.8612 19.9045C24.1062 19.6596 24.1062 19.2588 23.8612 19.0139L15.0329 10.1855C14.9067 10.0594 14.7472 10 14.5839 10Z" fill="white"/>
+        </svg>            
+      </div>
+    </div>
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".banner .mySwiper", {
+        loop: true,
+        navigation: {
+            nextEl: ".button-next",
+            prevEl: ".button-prev",
+        },
+        pagination: {
+            clickable: true,
+            el: ".swiper-pagination",
+        },
+      });
+    </script>
+  </div>
+  <div class="about pt_100">
+    <div class="bg_img">
+      <img src="./img/bg_about.png" alt="" />
+    </div>
+    <div class="container">
+      <div class="title_top">
+        <div class="title_top-text">ABOUT ICC</div>
+      </div>
+      <div class="about_box">
+        <div class="about_flex">
+          <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Chairman’s message</button>
+            <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">What we do</button>
+            <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Discover our history</button>
+          </div>
+          <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
+              <div class="about_card">
+                <div class="about_text">
+                  <div class="about_text-one">Our History</div>
+                  <div class="about_text-two"> ICC Qatar is the globally-influential national committee of the Paris-based ICC in the State of Qatar, and works to connect businesses of the country to the world, and the world to the businesses of Qatar </div>
+                  <a class="button" href="">
+                    <span>Read More</span>
+                    <span class="arrow">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 9.99999C2.5 9.75135 2.59877 9.51289 2.77459 9.33708C2.9504 9.16126 3.18886 9.06249 3.4375 9.06249L14.3 9.06249L10.275 5.03749C10.1094 4.85977 10.0192 4.62471 10.0235 4.38184C10.0278 4.13896 10.1262 3.90723 10.298 3.73546C10.4697 3.5637 10.7015 3.46531 10.9443 3.46102C11.1872 3.45674 11.4223 3.54689 11.6 3.71249L17.225 9.33749C17.4006 9.51327 17.4992 9.75155 17.4992 9.99999C17.4992 10.2484 17.4006 10.4867 17.225 10.6625L11.6 16.2875C11.4223 16.4531 11.1872 16.5432 10.9443 16.539C10.7015 16.5347 10.4697 16.4363 10.298 16.2645C10.1262 16.0928 10.0278 15.861 10.0235 15.6181C10.0192 15.3753 10.1094 15.1402 10.275 14.9625L14.3 10.9375L3.4375 10.9375C3.18886 10.9375 2.9504 10.8387 2.77459 10.6629C2.59877 10.4871 2.5 10.2486 2.5 9.99999Z" fill="#007DFF" />
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">
+              <div class="about_card">
+                <div class="about_text">
+                  <div class="about_text-one">Our History</div>
+                  <div class="about_text-two"> ICC Qatar is the globally-influential national committee of the Paris-based ICC in the State of Qatar, and works to connect businesses of the country to the world, and the world to the businesses of Qatar </div>
+                  <a class="button" href="">
+                    <span>Read More</span>
+                    <span class="arrow">
+                      <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_28_192)">
+                          <path d="M1.71855 10.1333C1.71855 9.85948 1.82719 9.59692 2.02059 9.40334C2.21399 9.20975 2.47629 9.101 2.7498 9.101L16.7645 9.101L15.4239 7.76938C15.2297 7.57501 15.1206 7.31137 15.1206 7.03648C15.1206 6.76159 15.2297 6.49796 15.4239 6.30358C15.618 6.1092 15.8814 6 16.156 6C16.4307 6 16.694 6.1092 16.8882 6.30358L19.982 9.40035C20.1251 9.54551 20.222 9.72985 20.2606 9.93009C20.2991 10.1303 20.2775 10.3375 20.1985 10.5255C20.1212 10.714 19.9898 10.8754 19.821 10.9893C19.6521 11.1032 19.4534 11.1645 19.2498 11.1655L2.7498 11.1655C2.47629 11.1655 2.21399 11.0568 2.02059 10.8632C1.82719 10.6696 1.71855 10.407 1.71855 10.1333Z" fill="#007DFF" />
+                          <path d="M15.1248 13.2299C15.124 13.0941 15.15 12.9594 15.2014 12.8336C15.2527 12.7079 15.3283 12.5935 15.4239 12.497L18.5176 9.40026C18.7118 9.20588 18.9752 9.09668 19.2498 9.09668C19.3858 9.09668 19.5204 9.12349 19.6461 9.17558C19.7717 9.22766 19.8858 9.30401 19.982 9.40026C20.0781 9.4965 20.1544 9.61076 20.2065 9.73652C20.2585 9.86227 20.2853 9.99705 20.2853 10.1332C20.2853 10.4081 20.1762 10.6717 19.982 10.8661L16.8882 13.9628C16.7924 14.0596 16.6783 14.1364 16.5527 14.1888C16.427 14.2412 16.2922 14.2682 16.1561 14.2682C16.0199 14.2682 15.8851 14.2412 15.7595 14.1888C15.6338 14.1364 15.5197 14.0596 15.4239 13.9628C15.3283 13.8664 15.2527 13.752 15.2014 13.6262C15.15 13.5005 15.124 13.3658 15.1248 13.2299Z" fill="#007DFF" />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_28_192">
+                            <rect width="20" height="22" fill="white" transform="translate(22) rotate(90)" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" tabindex="0">
+              <div class="about_card">
+                <div class="about_text">
+                  <div class="about_text-one">Our History</div>
+                  <div class="about_text-two"> ICC Qatar is the globally-influential national committee of the Paris-based ICC in the State of Qatar, and works to connect businesses of the country to the world, and the world to the businesses of Qatar </div>
+                  <a class="button" href="">
+                    <span>Read More</span>
+                    <span class="arrow">
+                      <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_28_192)">
+                          <path d="M1.71855 10.1333C1.71855 9.85948 1.82719 9.59692 2.02059 9.40334C2.21399 9.20975 2.47629 9.101 2.7498 9.101L16.7645 9.101L15.4239 7.76938C15.2297 7.57501 15.1206 7.31137 15.1206 7.03648C15.1206 6.76159 15.2297 6.49796 15.4239 6.30358C15.618 6.1092 15.8814 6 16.156 6C16.4307 6 16.694 6.1092 16.8882 6.30358L19.982 9.40035C20.1251 9.54551 20.222 9.72985 20.2606 9.93009C20.2991 10.1303 20.2775 10.3375 20.1985 10.5255C20.1212 10.714 19.9898 10.8754 19.821 10.9893C19.6521 11.1032 19.4534 11.1645 19.2498 11.1655L2.7498 11.1655C2.47629 11.1655 2.21399 11.0568 2.02059 10.8632C1.82719 10.6696 1.71855 10.407 1.71855 10.1333Z" fill="#007DFF" />
+                          <path d="M15.1248 13.2299C15.124 13.0941 15.15 12.9594 15.2014 12.8336C15.2527 12.7079 15.3283 12.5935 15.4239 12.497L18.5176 9.40026C18.7118 9.20588 18.9752 9.09668 19.2498 9.09668C19.3858 9.09668 19.5204 9.12349 19.6461 9.17558C19.7717 9.22766 19.8858 9.30401 19.982 9.40026C20.0781 9.4965 20.1544 9.61076 20.2065 9.73652C20.2585 9.86227 20.2853 9.99705 20.2853 10.1332C20.2853 10.4081 20.1762 10.6717 19.982 10.8661L16.8882 13.9628C16.7924 14.0596 16.6783 14.1364 16.5527 14.1888C16.427 14.2412 16.2922 14.2682 16.1561 14.2682C16.0199 14.2682 15.8851 14.2412 15.7595 14.1888C15.6338 14.1364 15.5197 14.0596 15.4239 13.9628C15.3283 13.8664 15.2527 13.752 15.2014 13.6262C15.15 13.5005 15.124 13.3658 15.1248 13.2299Z" fill="#007DFF" />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_28_192">
+                            <rect width="20" height="22" fill="white" transform="translate(22) rotate(90)" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="news pt_100">
+    <div class="container">
+      <div class="title_top">
+        <div class="title_top-text">NEWSROOM</div>
+      </div>
+      <div class="news_max">
+        <div class="news_box">
+          <a href="#" class="news_img">
+            <img src="./img/news1.png" alt="" />
+          </a>
+          <div class="news_text">
+            <h3 class="news_text-one"><a href="#">ICC Inter School Competition 2023</a></h3>
+            <div class="news_text-two"> On 13th October 2023, Indian Cultural Centre, under the aegis of the Embassy of India, conducted ‘ICC Interschool Dance Competition’ in Ashoka Hall, ICC ral Centre, under the aegis of the Embassy of India, conducted ‘ICC Interschool Dance Competition’ in Ashoka Hall, ICC.... </div>
+            <a class="news_text-more" href="news_text-more">
+              <span>Read More</span>
+              <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.499999 4.00001C0.499999 3.85082 0.559262 3.70775 0.664752 3.60226C0.770241 3.49677 0.913315 3.43751 1.0625 3.43751L7.58 3.43751L5.165 1.02251C5.06564 0.915876 5.01155 0.774841 5.01412 0.629115C5.01669 0.483389 5.07572 0.34435 5.17878 0.24129C5.28184 0.138231 5.42088 0.0791967 5.56661 0.0766255C5.71233 0.0740544 5.85337 0.128147 5.96 0.227507L9.335 3.60251C9.44034 3.70798 9.4995 3.85094 9.4995 4.00001C9.4995 4.14907 9.44034 4.29204 9.335 4.39751L5.96 7.77251C5.85337 7.87187 5.71233 7.92596 5.56661 7.92339C5.42088 7.92082 5.28184 7.86178 5.17878 7.75872C5.07572 7.65566 5.01669 7.51662 5.01412 7.3709C5.01155 7.22517 5.06564 7.08414 5.165 6.97751L7.58 4.56251L1.0625 4.56251C0.913315 4.56251 0.770241 4.50324 0.664752 4.39775C0.559262 4.29226 0.499999 4.14919 0.499999 4.00001Z" fill="black" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="news_box">
+          <div class="news_img">
+            <img src="./img/news2.png" alt="" />
+          </div>
+          <div class="news_text">
+            <h3 class="news_text-one"><a href="#">ICC Inter School Competition 2023</a></h3>
+            <div class="news_text-two"> On 13th October 2023, Indian Cultural Centre, under the aegis of the Embassy of India, conducted ‘ICC Interschool Dance Competition’ in Ashoka Hall, ICC.... </div>
+            <a class="news_text-more" href="">
+              <span>Read More</span>
+              <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.499999 4.00001C0.499999 3.85082 0.559262 3.70775 0.664752 3.60226C0.770241 3.49677 0.913315 3.43751 1.0625 3.43751L7.58 3.43751L5.165 1.02251C5.06564 0.915876 5.01155 0.774841 5.01412 0.629115C5.01669 0.483389 5.07572 0.34435 5.17878 0.24129C5.28184 0.138231 5.42088 0.0791967 5.56661 0.0766255C5.71233 0.0740544 5.85337 0.128147 5.96 0.227507L9.335 3.60251C9.44034 3.70798 9.4995 3.85094 9.4995 4.00001C9.4995 4.14907 9.44034 4.29204 9.335 4.39751L5.96 7.77251C5.85337 7.87187 5.71233 7.92596 5.56661 7.92339C5.42088 7.92082 5.28184 7.86178 5.17878 7.75872C5.07572 7.65566 5.01669 7.51662 5.01412 7.3709C5.01155 7.22517 5.06564 7.08414 5.165 6.97751L7.58 4.56251L1.0625 4.56251C0.913315 4.56251 0.770241 4.50324 0.664752 4.39775C0.559262 4.29226 0.499999 4.14919 0.499999 4.00001Z" fill="black" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="news_box">
+          <div class="news_img">
+            <img src="./img/news3.png" alt="" />
+          </div>
+          <div class="news_text">
+            <h3 class="news_text-one"><a href="#">ICC Inter School Competition 2023</a></h3>
+            <div class="news_text-two"> On 13th October 2023, Indian Cultural Centre, under the aegis of the Embassy of India, conducted ‘ICC Interschool Dance Competition’ in Ashoka Hall, ICC.... </div>
+            <a class="news_text-more" href="">
+              <span>Read More</span>
+              <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.499999 4.00001C0.499999 3.85082 0.559262 3.70775 0.664752 3.60226C0.770241 3.49677 0.913315 3.43751 1.0625 3.43751L7.58 3.43751L5.165 1.02251C5.06564 0.915876 5.01155 0.774841 5.01412 0.629115C5.01669 0.483389 5.07572 0.34435 5.17878 0.24129C5.28184 0.138231 5.42088 0.0791967 5.56661 0.0766255C5.71233 0.0740544 5.85337 0.128147 5.96 0.227507L9.335 3.60251C9.44034 3.70798 9.4995 3.85094 9.4995 4.00001C9.4995 4.14907 9.44034 4.29204 9.335 4.39751L5.96 7.77251C5.85337 7.87187 5.71233 7.92596 5.56661 7.92339C5.42088 7.92082 5.28184 7.86178 5.17878 7.75872C5.07572 7.65566 5.01669 7.51662 5.01412 7.3709C5.01155 7.22517 5.06564 7.08414 5.165 6.97751L7.58 4.56251L1.0625 4.56251C0.913315 4.56251 0.770241 4.50324 0.664752 4.39775C0.559262 4.29226 0.499999 4.14919 0.499999 4.00001Z" fill="black" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="what">
+    <div class="bg_img">
+      <img src="./img/offer.png" alt="" />
+    </div>
+    <div class="container big">
+      <div class="title_top">
+        <div class="title_top-text">Resources for business</div>
+      </div>
+      <div class="what_center">
+        <div class="what_box">
+          <div class="what_area">
+            <div class="what_icons">
+              <img src="./img/icon-1.svg" alt="" />
+            </div>
+            <div class="what_text">
+              <div class="what_text-one">Lorem ipsum</div>
+              <div class="what_text-two"> The ICC Academy offers a wide range of specialized e-learning courses and online certifications for trade professionals worldwide. We are part of the International Chamber of Commerce – the world’s largest business organization with close to 100 years of experience in defining commercial rules and standards to support international trade. ICC Academy courses and examinations are designed by leading industry experts drawn from ICC’s global network. </div>
+            </div>
+            <div class="center">
+              <a class="button" href="">
+                <span>Explore More</span>
+                <span class="arrow">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 9.99999C2.5 9.75135 2.59877 9.51289 2.77459 9.33708C2.9504 9.16126 3.18886 9.06249 3.4375 9.06249L14.3 9.06249L10.275 5.03749C10.1094 4.85977 10.0192 4.62471 10.0235 4.38184C10.0278 4.13896 10.1262 3.90723 10.298 3.73546C10.4697 3.5637 10.7015 3.46531 10.9443 3.46102C11.1872 3.45674 11.4223 3.54689 11.6 3.71249L17.225 9.33749C17.4006 9.51327 17.4992 9.75155 17.4992 9.99999C17.4992 10.2484 17.4006 10.4867 17.225 10.6625L11.6 16.2875C11.4223 16.4531 11.1872 16.5432 10.9443 16.539C10.7015 16.5347 10.4697 16.4363 10.298 16.2645C10.1262 16.0928 10.0278 15.861 10.0235 15.6181C10.0192 15.3753 10.1094 15.1402 10.275 14.9625L14.3 10.9375L3.4375 10.9375C3.18886 10.9375 2.9504 10.8387 2.77459 10.6629C2.59877 10.4871 2.5 10.2486 2.5 9.99999Z" fill="#007DFF"></path>
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="what_box">
+          <div class="what_area">
+            <div class="what_icons">
+              <img src="./img/icon-2.svg" alt="" />
+            </div>
+            <div class="what_text">
+              <div class="what_text-one">Lorem ipsum</div>
+              <div class="what_text-two"> Consult a wide range of resources, including our industry-leading rules and guidelines, and benefit from peerto- peer learning opportunities through open discussion forums to support your trading and financing activities.Consult a wide range of resources, including our industryleading rules and guidelines, and benefit from peer-to-peer learning opportunities thr a wide range of resources, including our industry-leading rules and guidelines, and benefit from peerto- peer learning opportunities through open discussion forums to support your trading and financing activities.Consult a wide range of resources, including our industryleading rules and guidelines, and benefit from peer-to-peer learning opportunities through open discussion forums to support your trading and financing activities. </div>
+            </div>
+            <div class="center">
+              <a class="button" href="">
+                <span>Explore More</span>
+                <span class="arrow">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 9.99999C2.5 9.75135 2.59877 9.51289 2.77459 9.33708C2.9504 9.16126 3.18886 9.06249 3.4375 9.06249L14.3 9.06249L10.275 5.03749C10.1094 4.85977 10.0192 4.62471 10.0235 4.38184C10.0278 4.13896 10.1262 3.90723 10.298 3.73546C10.4697 3.5637 10.7015 3.46531 10.9443 3.46102C11.1872 3.45674 11.4223 3.54689 11.6 3.71249L17.225 9.33749C17.4006 9.51327 17.4992 9.75155 17.4992 9.99999C17.4992 10.2484 17.4006 10.4867 17.225 10.6625L11.6 16.2875C11.4223 16.4531 11.1872 16.5432 10.9443 16.539C10.7015 16.5347 10.4697 16.4363 10.298 16.2645C10.1262 16.0928 10.0278 15.861 10.0235 15.6181C10.0192 15.3753 10.1094 15.1402 10.275 14.9625L14.3 10.9375L3.4375 10.9375C3.18886 10.9375 2.9504 10.8387 2.77459 10.6629C2.59877 10.4871 2.5 10.2486 2.5 9.99999Z" fill="#007DFF"></path>
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="what_box">
+          <div class="what_area">
+            <div class="what_icons">
+              <img src="./img/icon-3.svg" alt="" />
+            </div>
+            <div class="what_text">
+              <div class="what_text-one">Lorem ipsum</div>
+              <div class="what_text-two"> The Learning Management System allows for multiple training administrators within a company to cater for large companies with offices in different locations. Companies can easily manage allocation of the training and keep track of trainees’ progress and results if you so wish.The Learning Management System allows for multiple training administrators within a company to cater for large companies with offices in different locations. </div>
+            </div>
+            <div class="center">
+              <a class="button" href="">
+                <span>Explore More</span>
+                <span class="arrow">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 9.99999C2.5 9.75135 2.59877 9.51289 2.77459 9.33708C2.9504 9.16126 3.18886 9.06249 3.4375 9.06249L14.3 9.06249L10.275 5.03749C10.1094 4.85977 10.0192 4.62471 10.0235 4.38184C10.0278 4.13896 10.1262 3.90723 10.298 3.73546C10.4697 3.5637 10.7015 3.46531 10.9443 3.46102C11.1872 3.45674 11.4223 3.54689 11.6 3.71249L17.225 9.33749C17.4006 9.51327 17.4992 9.75155 17.4992 9.99999C17.4992 10.2484 17.4006 10.4867 17.225 10.6625L11.6 16.2875C11.4223 16.4531 11.1872 16.5432 10.9443 16.539C10.7015 16.5347 10.4697 16.4363 10.298 16.2645C10.1262 16.0928 10.0278 15.861 10.0235 15.6181C10.0192 15.3753 10.1094 15.1402 10.275 14.9625L14.3 10.9375L3.4375 10.9375C3.18886 10.9375 2.9504 10.8387 2.77459 10.6629C2.59877 10.4871 2.5 10.2486 2.5 9.99999Z" fill="#007DFF"></path>
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="what_box">
+          <div class="what_icons">
+            <img src="./img/icon-4.svg" alt="" />
+          </div>
+          <div class="what_text">
+            <div class="what_text-one">Lorem ipsum</div>
+            <div class="what_text-two"> The Learning Management System allows for multiple training administrators within a company to cater for large companies with offices in different locations. Companies can easily manage allocation of the training and keep track of trainees’ progress and results if you so wish.The Learning Management System allows for multiple training administrators within a company to cater for large companies with offices in different locations. </div>
+          </div>
+          <div class="center">
+            <a class="button" href="">
+              <span>Explore More</span>
+              <span class="arrow">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 9.99999C2.5 9.75135 2.59877 9.51289 2.77459 9.33708C2.9504 9.16126 3.18886 9.06249 3.4375 9.06249L14.3 9.06249L10.275 5.03749C10.1094 4.85977 10.0192 4.62471 10.0235 4.38184C10.0278 4.13896 10.1262 3.90723 10.298 3.73546C10.4697 3.5637 10.7015 3.46531 10.9443 3.46102C11.1872 3.45674 11.4223 3.54689 11.6 3.71249L17.225 9.33749C17.4006 9.51327 17.4992 9.75155 17.4992 9.99999C17.4992 10.2484 17.4006 10.4867 17.225 10.6625L11.6 16.2875C11.4223 16.4531 11.1872 16.5432 10.9443 16.539C10.7015 16.5347 10.4697 16.4363 10.298 16.2645C10.1262 16.0928 10.0278 15.861 10.0235 15.6181C10.0192 15.3753 10.1094 15.1402 10.275 14.9625L14.3 10.9375L3.4375 10.9375C3.18886 10.9375 2.9504 10.8387 2.77459 10.6629C2.59877 10.4871 2.5 10.2486 2.5 9.99999Z" fill="#007DFF"></path>
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="world mt_112" style="background-image: url(img/bg-1.png);">
+    <div class="container">
+      <div class="world_text">
+        <div class="world_text-one">World Chambers Federation</div>
+        <div class="world_text-two">Our ICC World Chambers Federation (WCF) is the backbone of the global chamber network leading, connecting and inspiring chambers to benefit real economies and communities, every day, everywhere.</div>
+        <div class="world_text-three">
+            <ul>
+                <li>Lorem ipsum dolor sit amet consectetur. Ac scelerisque eget id mauris sed auctor eget. Id tincidunt morbi morbi dui tristique. Gravida ullamcorper sit viverra tellus purus. Est mattis feugiat laoreet feugiat. Etiam suscipit sed porta lobortis aliquet condimentum. Morbi id ornare sit est pellentesque. </li>
+            </ul>
+        </div>
+        <div class="world_text-more">
+            <a href="">
+                <span>Download Benefits</span>
+            </a>
+            <a href="">
+                <span>Contact Us</span>
+            </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="membership">
+    <div class="container">
+      <div class="title_top">
+        <div class="title_top-text">Become a member</div>
+      </div>
+      <div class="membership_flex">
+        <div class="membership_box">
+          <div class="membership_text">
+            <div class="membership_text-one">
+                ICC’s membership spans more than 170 countries and includes many of the world’s largest companies, SMEs, business associations and local chambers of commerce. Joining ICC makes good business sense and is simple to do.
+            </div>
+            <div class="membership_btn">
+              <a href="" class="button_black">
+                  <span>Become a member</span>
+                  <span class="arrow">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 9.99999C2.5 9.75135 2.59877 9.51289 2.77459 9.33708C2.9504 9.16126 3.18886 9.06249 3.4375 9.06249L14.3 9.06249L10.275 5.03749C10.1094 4.85977 10.0192 4.62471 10.0235 4.38184C10.0278 4.13896 10.1262 3.90723 10.298 3.73546C10.4697 3.5637 10.7015 3.46531 10.9443 3.46102C11.1872 3.45674 11.4223 3.54689 11.6 3.71249L17.225 9.33749C17.4006 9.51327 17.4992 9.75155 17.4992 9.99999C17.4992 10.2484 17.4006 10.4867 17.225 10.6625L11.6 16.2875C11.4223 16.4531 11.1872 16.5432 10.9443 16.539C10.7015 16.5347 10.4697 16.4363 10.298 16.2645C10.1262 16.0928 10.0278 15.861 10.0235 15.6181C10.0192 15.3753 10.1094 15.1402 10.275 14.9625L14.3 10.9375L3.4375 10.9375C3.18886 10.9375 2.9504 10.8387 2.77459 10.6629C2.59877 10.4871 2.5 10.2486 2.5 9.99999Z" fill="#007DFF"></path>
+                    </svg>
+                  </span>
+                </a>
+            </div>
+          </div>
+        </div>
+        <div class="membership_box-img">
+          <div class="grid_img">
+            <img src="./img/membership1.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="contact pt_100">
+    <div class="title_top">
+      <div class="title_top-text">CONTACT US</div>
+    </div>
+    <div class="container big">
+      <div class="contact_max">
+        <div class="contact_img">
+          <img src="./img/contact1.png" alt="" />
+        </div>
+        <div class="contact_box">
+          <form action="">
+            <div class="flex">
+              <div class="group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" placeholder="First Name" />
+              </div>
+              <div class="group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" placeholder="Last Name" />
+              </div>
+            </div>
+            <div class="flex">
+              <div class="group">
+                <label for="address">Email Address</label>
+                <input type="email" id="address" placeholder="Email" />
+              </div>
+              <div class="group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" placeholder="Subject" />
+              </div>
+            </div>
+            <div class="group_label">
+              <label for="messages">Messages</label>
+            </div>
+            <div class="group_textarea">
+              <textarea aria-label="With textarea" placeholder="Write your message in here"></textarea>
+            </div>
+            <button>Send message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="corporate pb_140" style="overflow: hidden;">
+    <div class="container">
+        <div class="title_top">
+          <div class="title_top-text">CORPORATE MEMBERS</div>
+        </div>
+        <div class="corporate_box">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="corporate_img">
+                  <img src="./img/cqur-bank.png" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="corporate_img">
+                  <img src="./img/BSI.svg" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="corporate_img">
+                  <img src="./img/ALMARRI.svg" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="corporate_img">
+                  <img src="./img/GWC.svg" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="corporate_img">
+                  <img src="./img/BDP.svg" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="corporate_img">
+                  <img src="./img/sap.svg" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="corporate_img">
+                  <img src="./img/rayan.png" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="corporate_img">
+                  <img src="./img/qimc.png" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="corporate_img">
+                  <img src="./img/cqur-bank.png" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="corporate_img">
+                  <img src="./img/BSI.svg" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="corporate_img">
+                  <img src="./img/ALMARRI.svg" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="corporate_img">
+                  <img src="./img/GWC.svg" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="corporate_img">
+                  <img src="./img/BDP.svg" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="corporate_img">
+                  <img src="./img/sap.svg" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="corporate_img">
+                  <img src="./img/rayan.png" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="corporate_img">
+                  <img src="./img/qimc.png" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <script>
+            var swiper = new Swiper(".corporate .mySwiper", {
+              loop: true,
+              initialSlide: 2,
+              autoplay: true,
+              breakpoints: {
+                //  Nhỏ nhất bị ảnh hưởng là 0 - mobile đứng
+                0: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                },
+                //  Nhỏ nhất bị ảnh hưởng là 451px - mobile ngang
+                451: {
+                    slidesPerView: 4,
+                    spaceBetween: 40,
+                },
+                // Nhỏ nhất bị ảnh hưởng là 768px - ipad đứng
+                768: {
+                    slidesPerView: 5,
+                    spaceBetween: 60,
+                },
+                // Nhỏ nhất bị ảnh hưởng là 993px - ipad ngang
+                993: {
+                    slidesPerView: 6,
+                    spaceBetween: 85,
+                },
+              },
+            });
+          </script>
+        </div>
+        <div class="corporate_btn">
+          <a href="" class="button_black">
+            <span>Discover All</span>
+            <span class="arrow">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 9.99999C2.5 9.75135 2.59877 9.51289 2.77459 9.33708C2.9504 9.16126 3.18886 9.06249 3.4375 9.06249L14.3 9.06249L10.275 5.03749C10.1094 4.85977 10.0192 4.62471 10.0235 4.38184C10.0278 4.13896 10.1262 3.90723 10.298 3.73546C10.4697 3.5637 10.7015 3.46531 10.9443 3.46102C11.1872 3.45674 11.4223 3.54689 11.6 3.71249L17.225 9.33749C17.4006 9.51327 17.4992 9.75155 17.4992 9.99999C17.4992 10.2484 17.4006 10.4867 17.225 10.6625L11.6 16.2875C11.4223 16.4531 11.1872 16.5432 10.9443 16.539C10.7015 16.5347 10.4697 16.4363 10.298 16.2645C10.1262 16.0928 10.0278 15.861 10.0235 15.6181C10.0192 15.3753 10.1094 15.1402 10.275 14.9625L14.3 10.9375L3.4375 10.9375C3.18886 10.9375 2.9504 10.8387 2.77459 10.6629C2.59877 10.4871 2.5 10.2486 2.5 9.99999Z" fill="#007DFF"></path>
+              </svg>
+            </span>
+          </a>
+        </div>
+    </div>
+  </div>
+  <footer>
+    <div class="footer">
+      <div class="container">
+        <div class="footer_max">
+          <div class="footer_top">
+            <div class="footer_child">
+              <div class="footer_heading">International Chamber of Commerce Qatar</div>
+              <div class="footer_stext">The World’s Leading Arbitration Institution </div>
+            </div>
+            <div class="footer_child">
+              <div class="footer_heading">Quick Links</div>
+              <ul>
+                <li>
+                    <a href="">About Us</a>
+                </li>
+                <li>
+                    <a href="">Resources For Business</a>
+                </li>
+                <li>
+                    <a href="">Policy Commissions</a>
+                </li>
+                <li>
+                    <a href="">Events</a>
+                </li>
+                <li>
+                    <a href="">Membership</a>
+                </li>
+                <li>
+                    <a href="">Gallery</a>
+                </li>
+                <li>
+                    <a href="">Special Projects</a>
+                </li>
+                <li>
+                    <a href="">Newsroom</a>
+                </li>
+                <li>
+                    <a href="">Incoterms</a>
+                </li>
+                <li>
+                    <a href="">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer_child">
+              <div class="footer_heading">Get email alert</div>
+              <div class="footer_stext">Stay up-to-date with all ICC Qatar news information</div>
+              <a href="#" class="footer_button" style="width: 100%">Sign Up Now</a>
+            </div>
+          </div>
+          <div class="footer_bottom">
+            <div class="footer_bottom-text"> © 2024 | All Rights Reserved. Crafted by </div>
+            <div class="flex_bottom">
+              <a href="#">
+                <img src="img/social-youtube.svg" alt="">
+              </a>
+              <a href="">
+                <img src="./img/ig.svg" alt="" />
+              </a>
+              <a href="">
+                <img src="./img/Facebook.svg" alt="" />
+              </a>
+              <a href="">
+                <img src="./img/Twitter.svg" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
