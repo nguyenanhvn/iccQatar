@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./js/jquery.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/mani.js"></script>
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <div class="header_max">
+          <a class="header_logo" href="">
+            <img src="./img/logo.svg" alt="" />
+          </a>
+          <div class="header_box">
+            <div class="header_search">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.99219 17.9922C7.74219 17.9922 6.57031 17.7578 5.47656 17.2891C4.38281 16.8203 3.42969 16.1797 2.61719 15.3672C1.80469 14.5547 1.16406 13.6016 0.695312 12.5078C0.226562 11.4141 -0.0078125 10.2422 -0.0078125 8.99219C-0.0078125 7.74219 0.226562 6.57031 0.695312 5.47656C1.16406 4.38281 1.80469 3.42969 2.61719 2.61719C3.42969 1.80469 4.38281 1.16406 5.47656 0.695312C6.57031 0.226562 7.74219 -0.0078125 8.99219 -0.0078125C10.2422 -0.0078125 11.4141 0.226562 12.5078 0.695312C13.6016 1.16406 14.5547 1.80469 15.3672 2.61719C16.1797 3.42969 16.8203 4.38281 17.2891 5.47656C17.7578 6.57031 17.9922 7.74219 17.9922 8.99219C17.9922 10.2422 17.7578 11.4141 17.2891 12.5078C16.8203 13.6016 16.1797 14.5547 15.3672 15.3672C14.5547 16.1797 13.6016 16.8203 12.5078 17.2891C11.4141 17.7578 10.2422 17.9922 8.99219 17.9922ZM8.99219 2.00781C8.02344 2.00781 7.10938 2.1875 6.25 2.54688C5.40625 2.90625 4.66797 3.40234 4.03516 4.03516C3.40234 4.66797 2.90625 5.40625 2.54688 6.25C2.1875 7.10938 2.00781 8.02344 2.00781 8.99219C2.00781 9.97656 2.1875 10.8906 2.54688 11.7344C2.90625 12.5938 3.40234 13.3359 4.03516 13.9609C4.66797 14.5859 5.40625 15.0859 6.25 15.4609C7.10938 15.8203 8.02344 16 8.99219 16C9.97656 16 10.8906 15.8203 11.7344 15.4609C12.5938 15.0859 13.3359 14.5859 13.9609 13.9609C14.5859 13.3359 15.0859 12.5938 15.4609 11.7344C15.8203 10.8906 16 9.97656 16 8.99219C16 8.02344 15.8203 7.10938 15.4609 6.25C15.0859 5.40625 14.5859 4.66797 13.9609 4.03516C13.3359 3.40234 12.5938 2.90625 11.7344 2.54688C10.8906 2.1875 9.97656 2.00781 8.99219 2.00781ZM19 20.0078C18.8438 20.0078 18.7148 19.9805 18.6133 19.9258C18.5117 19.8711 18.4062 19.7969 18.2969 19.7031L14.0078 15.3906C13.8047 15.2031 13.7031 14.9727 13.7031 14.6992C13.7031 14.4258 13.8047 14.1953 14.0078 14.0078C14.1953 13.8047 14.4258 13.7031 14.6992 13.7031C14.9727 13.7031 15.2031 13.8047 15.3906 14.0078L19.7031 18.2969C19.9062 18.5 20.0078 18.7344 20.0078 19C20.0078 19.2656 19.9062 19.5 19.7031 19.7031C19.5938 19.7969 19.4883 19.8711 19.3867 19.9258C19.2852 19.9805 19.1562 20.0078 19 20.0078Z"
+                  fill="black"
+                />
+              </svg>
+              <span>Search</span>
+            </div>
+            <div class="header_menu">
+              <svg
+                width="20"
+                height="14"
+                viewBox="0 0 20 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19 8.00781H1C0.703125 8.00781 0.460938 7.91406 0.273438 7.72656C0.0859375 7.53906 -0.0078125 7.29688 -0.0078125 7C-0.0078125 6.70312 0.0859375 6.46094 0.273438 6.27344C0.460938 6.08594 0.703125 5.99219 1 5.99219H19C19.2969 5.99219 19.5391 6.08594 19.7266 6.27344C19.9141 6.46094 20.0078 6.70312 20.0078 7C20.0078 7.29688 19.9141 7.53906 19.7266 7.72656C19.5391 7.91406 19.2969 8.00781 19 8.00781ZM19 2.00781H1C0.703125 2.00781 0.460938 1.91406 0.273438 1.72656C0.0859375 1.53906 -0.0078125 1.29688 -0.0078125 1C-0.0078125 0.703125 0.0859375 0.460938 0.273438 0.273438C0.460938 0.0859375 0.703125 -0.0078125 1 -0.0078125H19C19.2969 -0.0078125 19.5391 0.0859375 19.7266 0.273438C19.9141 0.460938 20.0078 0.703125 20.0078 1C20.0078 1.29688 19.9141 1.53906 19.7266 1.72656C19.5391 1.91406 19.2969 2.00781 19 2.00781ZM19 14.0078H1C0.703125 14.0078 0.460938 13.9141 0.273438 13.7266C0.0859375 13.5391 -0.0078125 13.2969 -0.0078125 13C-0.0078125 12.7031 0.0859375 12.4609 0.273438 12.2734C0.460938 12.0859 0.703125 11.9922 1 11.9922H19C19.2969 11.9922 19.5391 12.0859 19.7266 12.2734C19.9141 12.4609 20.0078 12.7031 20.0078 13C20.0078 13.2969 19.9141 13.5391 19.7266 13.7266C19.5391 13.9141 19.2969 14.0078 19 14.0078Z"
+                  fill="black"
+                />
+              </svg>
+              <span>Menu</span>
+            </div>
+            <div class="header_button">
+              <span> Become a Member</span>
+              <span class="arrow">
+                <svg
+                  width="22"
+                  height="20"
+                  viewBox="0 0 22 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_28_192)">
+                    <path
+                      d="M1.71855 10.1333C1.71855 9.85948 1.82719 9.59692 2.02059 9.40334C2.21399 9.20975 2.47629 9.101 2.7498 9.101L16.7645 9.101L15.4239 7.76938C15.2297 7.57501 15.1206 7.31137 15.1206 7.03648C15.1206 6.76159 15.2297 6.49796 15.4239 6.30358C15.618 6.1092 15.8814 6 16.156 6C16.4307 6 16.694 6.1092 16.8882 6.30358L19.982 9.40035C20.1251 9.54551 20.222 9.72985 20.2606 9.93009C20.2991 10.1303 20.2775 10.3375 20.1985 10.5255C20.1212 10.714 19.9898 10.8754 19.821 10.9893C19.6521 11.1032 19.4534 11.1645 19.2498 11.1655L2.7498 11.1655C2.47629 11.1655 2.21399 11.0568 2.02059 10.8632C1.82719 10.6696 1.71855 10.407 1.71855 10.1333Z"
+                      fill="#007DFF"
+                    />
+                    <path
+                      d="M15.1248 13.2299C15.124 13.0941 15.15 12.9594 15.2014 12.8336C15.2527 12.7079 15.3283 12.5935 15.4239 12.497L18.5176 9.40026C18.7118 9.20588 18.9752 9.09668 19.2498 9.09668C19.3858 9.09668 19.5204 9.12349 19.6461 9.17558C19.7717 9.22766 19.8858 9.30401 19.982 9.40026C20.0781 9.4965 20.1544 9.61076 20.2065 9.73652C20.2585 9.86227 20.2853 9.99705 20.2853 10.1332C20.2853 10.4081 20.1762 10.6717 19.982 10.8661L16.8882 13.9628C16.7924 14.0596 16.6783 14.1364 16.5527 14.1888C16.427 14.2412 16.2922 14.2682 16.1561 14.2682C16.0199 14.2682 15.8851 14.2412 15.7595 14.1888C15.6338 14.1364 15.5197 14.0596 15.4239 13.9628C15.3283 13.8664 15.2527 13.752 15.2014 13.6262C15.15 13.5005 15.124 13.3658 15.1248 13.2299Z"
+                      fill="#007DFF"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_28_192">
+                      <rect
+                        width="20"
+                        height="22"
+                        fill="white"
+                        transform="translate(22) rotate(90)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="menu">
+      <div class="menu_max">
+        <div class="menu_box">
+          <div class="flex">
+            <div class="menu_logo">
+              <img src="./img/logo.svg" alt="" />
+            </div>
+            <div class="close">
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.7017 10.8615C11.7568 10.9167 11.8006 10.9822 11.8304 11.0542C11.8603 11.1263 11.8757 11.2036 11.8757 11.2816C11.8757 11.3596 11.8603 11.4368 11.8304 11.5089C11.8006 11.581 11.7568 11.6465 11.7017 11.7017C11.6465 11.7568 11.581 11.8006 11.5089 11.8304C11.4368 11.8603 11.3596 11.8757 11.2816 11.8757C11.2036 11.8757 11.1263 11.8603 11.0542 11.8304C10.9822 11.8006 10.9167 11.7568 10.8615 11.7017L5.93783 6.77724L1.01416 11.7017C0.902747 11.8131 0.75164 11.8757 0.59408 11.8757C0.43652 11.8757 0.285414 11.8131 0.174002 11.7017C0.0625904 11.5902 3.10588e-09 11.4391 0 11.2816C-3.10588e-09 11.124 0.0625904 10.9729 0.174002 10.8615L5.09842 5.93783L0.174002 1.01416C0.0625904 0.902747 -1.17391e-09 0.75164 0 0.59408C1.17391e-09 0.43652 0.0625904 0.285414 0.174002 0.174002C0.285414 0.0625904 0.43652 1.17391e-09 0.59408 0C0.75164 -1.17391e-09 0.902747 0.0625904 1.01416 0.174002L5.93783 5.09842L10.8615 0.174002C10.9729 0.0625904 11.124 -3.10588e-09 11.2816 0C11.4391 3.10588e-09 11.5902 0.0625904 11.7017 0.174002C11.8131 0.285414 11.8757 0.43652 11.8757 0.59408C11.8757 0.75164 11.8131 0.902747 11.7017 1.01416L6.77724 5.93783L11.7017 10.8615Z"
+                  fill="black"
+                />
+              </svg>
+            </div>
+          </div>
+          <ul class="menu_nav">
+            <li class="menu_item">
+              <div class="flex_gap">
+                <a href="">About Icc</a>
+                <span class="arrow"></span>
+              </div>
+            </li>
+            <li class="menu_item">
+              <div class="flex_gap">
+                <a href="">Area of work</a>
+                <span class="arrow"></span>
+              </div>
+              <ul class="sub-menu">
+                <li>
+                  <a href="">Commissions</a>
+                </li>
+                <li>
+                  <a href="">Products & Services</a>
+                </li>
+                <li>
+                  <a href="">Discover SME360X</a>
+                </li>
+                <li>
+                  <a href="">ICC Network</a>
+                </li>
+                <li>
+                  <a href="">ICC Partnership</a>
+                </li>
+                <li>
+                  <a href="">Special Projects</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu_item">
+              <div class="flex_gap">
+                <a href="">Icc Global</a>
+                <span class="arrow"></span>
+              </div>
+            </li>
+            <li class="menu_item">
+              <div class="flex_gap">
+                <a href="">News & media</a>
+                <span class="arrow"></span>
+              </div>
+            </li>
+            <li class="menu_item">
+              <div class="flex_gap">
+                <a href="">events</a>
+                <span class="arrow"></span>
+              </div>
+            </li>
+            <li class="menu_item">
+              <div class="flex_gap">
+                <a href="">events</a>
+                <span class="arrow"></span>
+              </div>
+            </li>
+            <li class="menu_item">
+              <div class="flex_gap">
+                <a href="">gallery</a>
+              </div>
+            </li>
+            <li class="menu_item">
+              <div class="flex_gap">
+                <a href="">Newsroom</a>
+              </div>
+            </li>
+            <li class="menu_item">
+              <div class="flex_gap">
+                <a href="">Contact Us</a>
+              </div>
+            </li>
+          </ul>
+          <div class="flex_bottom pt_40">
+            <a href="">
+              <img src="./img/ig.svg" alt="" />
+            </a>
+            <a href="">
+              <img src="./img/Facebook.svg" alt="" />
+            </a>
+            <a href="">
+              <img src="./img/Twitter.svg" alt="" />
+            </a>
+          </div>
+          <div class="menu_position">
+            <img src="./img/map.png" alt="" />
+          </div>
+        </div>
+        <div class="menu_img">
+          <img src="./img/Menu.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <div
+      class="banner_inner"
+      style="background-image: url(./img/banner_inner.png)"
+    >
+      <div class="container mw_1224">
+        <div class="banner_inner-box">
+          <div class="banner_inner-max">
+            <div class="banner_inner-max-one">World Chambers Federation</div>
+            <div class="banner_inner-max-two">
+              Our WCF is a non-political, non-governmental body providing a
+              platform for chamber leaders to connect, inspire and strengthen
+              links among chambers.
+            </div>
+          </div>
+          <div class="banner_inner-flex">
+            <a class="text-one" href="">Home</a>
+            <span>
+              <svg
+                width="8"
+                height="12"
+                viewBox="0 0 8 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0.862061 1.13798L5.72406 5.99998L0.862061 10.862L1.80473 11.8046L7.60939 5.99998L1.80473 0.195312L0.862061 1.13798Z"
+                  fill="white"
+                />
+              </svg>
+            </span>
+            <div class="text-two">World Chambers Federation</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="who">
+      <div class="container mw_1224">
+        <div class="title_small">Who we are</div>
+        <div class="who_max">
+          <div class="who_text">
+            <p>
+              The ICC World Chambers Federation (WCF) is the forum that connects
+              chambers across borders, creating a better environment for
+              business and MSMEs, and driving prosperity and opportunity for
+              all.
+            </p>
+            <p>
+              WCF is ICC’s unique and truly global forum connecting, leading and
+              inspiring the global network of chambers and their respective
+              business communities. As well as strengthening links among
+              chambers, WCF also helps individual chambers become more
+              productive.
+            </p>
+            <p>
+              We work for and with chambers through our shared principles —
+              Collaboration, Pioneering, Innovation, Learning, Teamwork and
+              Trust.
+            </p>
+          </div>
+          <div class="who_box">
+            <div class="who_flex">
+              <div class="who_box-one">
+                <div class="text-one">+1500</div>
+                <div class="text-two">
+                  WCF chamber members from more than 100 countries and
+                  territories
+                </div>
+              </div>
+              <div class="who_box-two">
+                <div class="text-one">+15000</div>
+                <div class="text-two">
+                  Numbers of world chambers congress participants
+                </div>
+              </div>
+            </div>
+            <div class="who_box-three">
+              <div class="text-one">+3000</div>
+              <div class="text-two">
+                Chambers involved in WCF activities and global outreach
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="global">
+      <div class="container mw_1224">
+        <div class="title_small">What is the global footprint of the WCF?</div>
+        <div class="who_text">
+          <p>
+            Chambers of commerce are an essential and credible intermediary
+            between government, business and the general public. With a history
+            spanning over 400 years, chambers today exist in almost every
+            country and offer a multitude of programs and services to support
+            trade and development. WCF unites this dynamic network and
+            represents the interests of local, national, regional, bilateral and
+            transnational chambers of commerce and industry worldwide.
+          </p>
+          <p>
+            Our members are in 116 countries/territories, from all regions of
+            the world and are the key players in the work of ICC World Chambers
+            Federation.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="mt_95">
+      <div class="container">
+        <div class="map">
+          <div class="map_center">
+            <img src="./img/map_max.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="global">
+      <div class="container mw_1224">
+        <div class="title_small">Membership Benefits</div>
+        <div class="who_text">
+          <p>
+            When you join the ICC World Chambers Federation (WCF), you become
+            part of the forum that connects chambers across borders, creating a
+            better environment for business and MSMEs, while driving prosperity
+            and opportunity for all.
+          </p>
+          <p>
+            The benefits of WCF membership are broad ranging. They include
+            opportunities from shaping the next generation of tailor-made
+            solutions for chambers and smaller business to eligibility for a WCF
+            leadership position.
+          </p>
+          <p><strong>Browse all benefits in our membership brochure</strong></p>
+        </div>
+        <div class="global_end">
+          <a href="">Learn More</a>
+        </div>
+      </div>
+    </div>
+    <div class="joining">
+      <div class="container mw_1224">
+        <div class="joining_top">
+          <div class="joining_top-text">
+            Joining ICC, and consequently WCF, is simple to do. Click here to
+            become a member of ICC Qatar and consequently WCF.
+          </div>
+          <div class="joining_top-button">
+            <a href="">Join Us</a>
+          </div>
+        </div>
+        <div class="joining_center">
+          <div class="joining_img">
+            <img src="./img/joining1.png" alt="" />
+            <div class="play">
+              <svg
+                width="57"
+                height="57"
+                viewBox="0 0 57 57"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_315_204)">
+                  <path
+                    d="M28.5 0C36.0587 0 43.3078 3.00267 48.6525 8.34746C53.9973 13.6922 57 20.9413 57 28.5C57 36.0587 53.9973 43.3078 48.6525 48.6525C43.3078 53.9973 36.0587 57 28.5 57C20.9413 57 13.6922 53.9973 8.34746 48.6525C3.00267 43.3078 0 36.0587 0 28.5C0 20.9413 3.00267 13.6922 8.34746 8.34746C13.6922 3.00267 20.9413 0 28.5 0ZM5.34375 28.5C5.34375 34.6414 7.78342 40.5313 12.1261 44.8739C16.4687 49.2166 22.3586 51.6562 28.5 51.6562C34.6414 51.6562 40.5313 49.2166 44.8739 44.8739C49.2166 40.5313 51.6562 34.6414 51.6562 28.5C51.6562 22.3586 49.2166 16.4687 44.8739 12.1261C40.5313 7.78342 34.6414 5.34375 28.5 5.34375C22.3586 5.34375 16.4687 7.78342 12.1261 12.1261C7.78342 16.4687 5.34375 22.3586 5.34375 28.5ZM22.7252 18.6212L37.9157 27.7376C38.047 27.8169 38.1555 27.9287 38.2309 28.0623C38.3063 28.1959 38.3459 28.3466 38.3459 28.5C38.3459 28.6534 38.3063 28.8041 38.2309 28.9377C38.1555 29.0713 38.047 29.1831 37.9157 29.2624L22.7252 38.3788C22.5901 38.4602 22.4358 38.5042 22.2782 38.5065C22.1205 38.5087 21.965 38.469 21.8277 38.3914C21.6904 38.3139 21.5761 38.2013 21.4966 38.0651C21.4171 37.929 21.3751 37.7741 21.375 37.6164V19.3871C21.3745 19.2291 21.416 19.0738 21.4952 18.9372C21.5745 18.8005 21.6887 18.6874 21.8262 18.6094C21.9636 18.5315 22.1193 18.4915 22.2773 18.4935C22.4353 18.4956 22.5898 18.5397 22.7252 18.6212Z"
+                    fill="white"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_315_204">
+                    <rect width="57" height="57" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+          </div>
+          <div class="joining_img">
+            <img src="./img/joining2.png" alt="" />
+            <div class="play">
+              <svg
+                width="57"
+                height="57"
+                viewBox="0 0 57 57"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_315_204)">
+                  <path
+                    d="M28.5 0C36.0587 0 43.3078 3.00267 48.6525 8.34746C53.9973 13.6922 57 20.9413 57 28.5C57 36.0587 53.9973 43.3078 48.6525 48.6525C43.3078 53.9973 36.0587 57 28.5 57C20.9413 57 13.6922 53.9973 8.34746 48.6525C3.00267 43.3078 0 36.0587 0 28.5C0 20.9413 3.00267 13.6922 8.34746 8.34746C13.6922 3.00267 20.9413 0 28.5 0ZM5.34375 28.5C5.34375 34.6414 7.78342 40.5313 12.1261 44.8739C16.4687 49.2166 22.3586 51.6562 28.5 51.6562C34.6414 51.6562 40.5313 49.2166 44.8739 44.8739C49.2166 40.5313 51.6562 34.6414 51.6562 28.5C51.6562 22.3586 49.2166 16.4687 44.8739 12.1261C40.5313 7.78342 34.6414 5.34375 28.5 5.34375C22.3586 5.34375 16.4687 7.78342 12.1261 12.1261C7.78342 16.4687 5.34375 22.3586 5.34375 28.5ZM22.7252 18.6212L37.9157 27.7376C38.047 27.8169 38.1555 27.9287 38.2309 28.0623C38.3063 28.1959 38.3459 28.3466 38.3459 28.5C38.3459 28.6534 38.3063 28.8041 38.2309 28.9377C38.1555 29.0713 38.047 29.1831 37.9157 29.2624L22.7252 38.3788C22.5901 38.4602 22.4358 38.5042 22.2782 38.5065C22.1205 38.5087 21.965 38.469 21.8277 38.3914C21.6904 38.3139 21.5761 38.2013 21.4966 38.0651C21.4171 37.929 21.3751 37.7741 21.375 37.6164V19.3871C21.3745 19.2291 21.416 19.0738 21.4952 18.9372C21.5745 18.8005 21.6887 18.6874 21.8262 18.6094C21.9636 18.5315 22.1193 18.4915 22.2773 18.4935C22.4353 18.4956 22.5898 18.5397 22.7252 18.6212Z"
+                    fill="white"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_315_204">
+                    <rect width="57" height="57" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="related">
+      
+    </div>
+    <footer>
+      <div class="footer">
+        <div class="container">
+          <div class="footer_max">
+            <div class="footer_top">
+              <div class="footer_child">
+                <div class="footer_heading">
+                  International Chamber of Commerce Qatar
+                </div>
+                <div class="footer_stext">
+                  The World’s Leading Arbitration Institution
+                </div>
+              </div>
+              <div class="footer_child">
+                <div class="footer_heading">Quick Links</div>
+                <ul>
+                  <li>
+                    <a href="">About Us</a>
+                  </li>
+                  <li>
+                    <a href="">Resources For Business</a>
+                  </li>
+                  <li>
+                    <a href="">Policy Commissions</a>
+                  </li>
+                  <li>
+                    <a href="">Events</a>
+                  </li>
+                  <li>
+                    <a href="">Membership</a>
+                  </li>
+                  <li>
+                    <a href="">Gallery</a>
+                  </li>
+                  <li>
+                    <a href="">Special Projects</a>
+                  </li>
+                  <li>
+                    <a href="">Newsroom</a>
+                  </li>
+                  <li>
+                    <a href="">Incoterms</a>
+                  </li>
+                  <li>
+                    <a href="">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer_child">
+                <div class="footer_heading">Get email alert</div>
+                <div class="footer_stext">
+                  Stay up-to-date with all ICC Qatar news information
+                </div>
+                <a href="#" class="footer_button" style="width: 100%"
+                  >Sign Up Now</a
+                >
+              </div>
+            </div>
+            <div class="footer_bottom">
+              <div class="footer_bottom-text">
+                © 2024 | All Rights Reserved. Crafted by
+              </div>
+              <div class="flex_bottom">
+                <a href="#">
+                  <img src="img/social-youtube.svg" alt="" />
+                </a>
+                <a href="">
+                  <img src="./img/ig.svg" alt="" />
+                </a>
+                <a href="">
+                  <img src="./img/Facebook.svg" alt="" />
+                </a>
+                <a href="">
+                  <img src="./img/Twitter.svg" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
