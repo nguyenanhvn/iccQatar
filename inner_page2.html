@@ -9,6 +9,7 @@
     <script src="./js/mani.js"></script>
     <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/font.css" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
@@ -351,7 +352,7 @@
             Joining ICC, and consequently WCF, is simple to do. Click here to
             become a member of ICC Qatar and consequently WCF.
           </div>
-          <a href="" class="joining_button">
+          <a href="" class="joining_button button_black">
             <span>Join Us</span>
             <span class="arrow">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -361,7 +362,7 @@
           </a>
         </div>
         <div class="joining_center">
-          <div class="joining_img">
+          <a href="#" class="joining_img">
             <img src="./img/joining1.png" alt="" />
             <div class="play">
               <svg
@@ -384,8 +385,8 @@
                 </defs>
               </svg>
             </div>
-          </div>
-          <div class="joining_img">
+          </a>
+          <a class="joining_img">
             <img src="./img/joining2.png" alt="" />
             <div class="play">
               <svg
@@ -408,7 +409,7 @@
                 </defs>
               </svg>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>
@@ -593,31 +594,11 @@
           <script>
             var swiper = new Swiper(".related .mySwiper", {
               //freeMode: true,
+              slidesPerView: "auto",
+              spaceBetween: 30,
               pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
-              },
-              breakpoints: {
-                // Nhỏ nhất bị ảnh hưởng là 0 - mobile đứng
-                0: {
-                  slidesPerView: 1,
-                  spaceBetween: 20,
-                },
-                // Nhỏ nhất bị ảnh hưởng là 451px - mobile ngang
-                451: {
-                  slidesPerView: 2,
-                  spaceBetween: 20,
-                },
-                // Nhỏ nhất bị ảnh hưởng là 768px - ipad đứng
-                768: {
-                  slidesPerView: 2,
-                  spaceBetween: 20,
-                },
-                // Nhỏ nhất bị ảnh hưởng là 993px - ipad ngang
-                993: {
-                  slidesPerView: 3,
-                  spaceBetween: 30,
-                },
               },
             });
           </script>
