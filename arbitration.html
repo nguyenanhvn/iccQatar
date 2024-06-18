@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./js/jquery.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/mani.js"></script>
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <div class="header_max">
+          <a class="header_logo" href="">
+            <img src="./img/logo.svg" alt="" />
+          </a>
+          <div class="header_box">
+            <div class="header_search">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.99219 17.9922C7.74219 17.9922 6.57031 17.7578 5.47656 17.2891C4.38281 16.8203 3.42969 16.1797 2.61719 15.3672C1.80469 14.5547 1.16406 13.6016 0.695312 12.5078C0.226562 11.4141 -0.0078125 10.2422 -0.0078125 8.99219C-0.0078125 7.74219 0.226562 6.57031 0.695312 5.47656C1.16406 4.38281 1.80469 3.42969 2.61719 2.61719C3.42969 1.80469 4.38281 1.16406 5.47656 0.695312C6.57031 0.226562 7.74219 -0.0078125 8.99219 -0.0078125C10.2422 -0.0078125 11.4141 0.226562 12.5078 0.695312C13.6016 1.16406 14.5547 1.80469 15.3672 2.61719C16.1797 3.42969 16.8203 4.38281 17.2891 5.47656C17.7578 6.57031 17.9922 7.74219 17.9922 8.99219C17.9922 10.2422 17.7578 11.4141 17.2891 12.5078C16.8203 13.6016 16.1797 14.5547 15.3672 15.3672C14.5547 16.1797 13.6016 16.8203 12.5078 17.2891C11.4141 17.7578 10.2422 17.9922 8.99219 17.9922ZM8.99219 2.00781C8.02344 2.00781 7.10938 2.1875 6.25 2.54688C5.40625 2.90625 4.66797 3.40234 4.03516 4.03516C3.40234 4.66797 2.90625 5.40625 2.54688 6.25C2.1875 7.10938 2.00781 8.02344 2.00781 8.99219C2.00781 9.97656 2.1875 10.8906 2.54688 11.7344C2.90625 12.5938 3.40234 13.3359 4.03516 13.9609C4.66797 14.5859 5.40625 15.0859 6.25 15.4609C7.10938 15.8203 8.02344 16 8.99219 16C9.97656 16 10.8906 15.8203 11.7344 15.4609C12.5938 15.0859 13.3359 14.5859 13.9609 13.9609C14.5859 13.3359 15.0859 12.5938 15.4609 11.7344C15.8203 10.8906 16 9.97656 16 8.99219C16 8.02344 15.8203 7.10938 15.4609 6.25C15.0859 5.40625 14.5859 4.66797 13.9609 4.03516C13.3359 3.40234 12.5938 2.90625 11.7344 2.54688C10.8906 2.1875 9.97656 2.00781 8.99219 2.00781ZM19 20.0078C18.8438 20.0078 18.7148 19.9805 18.6133 19.9258C18.5117 19.8711 18.4062 19.7969 18.2969 19.7031L14.0078 15.3906C13.8047 15.2031 13.7031 14.9727 13.7031 14.6992C13.7031 14.4258 13.8047 14.1953 14.0078 14.0078C14.1953 13.8047 14.4258 13.7031 14.6992 13.7031C14.9727 13.7031 15.2031 13.8047 15.3906 14.0078L19.7031 18.2969C19.9062 18.5 20.0078 18.7344 20.0078 19C20.0078 19.2656 19.9062 19.5 19.7031 19.7031C19.5938 19.7969 19.4883 19.8711 19.3867 19.9258C19.2852 19.9805 19.1562 20.0078 19 20.0078Z"
+                  fill="black"
+                />
+              </svg>
+              <span>Search</span>
+            </div>
+            <div class="header_menu">
+              <svg
+                width="20"
+                height="14"
+                viewBox="0 0 20 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19 8.00781H1C0.703125 8.00781 0.460938 7.91406 0.273438 7.72656C0.0859375 7.53906 -0.0078125 7.29688 -0.0078125 7C-0.0078125 6.70312 0.0859375 6.46094 0.273438 6.27344C0.460938 6.08594 0.703125 5.99219 1 5.99219H19C19.2969 5.99219 19.5391 6.08594 19.7266 6.27344C19.9141 6.46094 20.0078 6.70312 20.0078 7C20.0078 7.29688 19.9141 7.53906 19.7266 7.72656C19.5391 7.91406 19.2969 8.00781 19 8.00781ZM19 2.00781H1C0.703125 2.00781 0.460938 1.91406 0.273438 1.72656C0.0859375 1.53906 -0.0078125 1.29688 -0.0078125 1C-0.0078125 0.703125 0.0859375 0.460938 0.273438 0.273438C0.460938 0.0859375 0.703125 -0.0078125 1 -0.0078125H19C19.2969 -0.0078125 19.5391 0.0859375 19.7266 0.273438C19.9141 0.460938 20.0078 0.703125 20.0078 1C20.0078 1.29688 19.9141 1.53906 19.7266 1.72656C19.5391 1.91406 19.2969 2.00781 19 2.00781ZM19 14.0078H1C0.703125 14.0078 0.460938 13.9141 0.273438 13.7266C0.0859375 13.5391 -0.0078125 13.2969 -0.0078125 13C-0.0078125 12.7031 0.0859375 12.4609 0.273438 12.2734C0.460938 12.0859 0.703125 11.9922 1 11.9922H19C19.2969 11.9922 19.5391 12.0859 19.7266 12.2734C19.9141 12.4609 20.0078 12.7031 20.0078 13C20.0078 13.2969 19.9141 13.5391 19.7266 13.7266C19.5391 13.9141 19.2969 14.0078 19 14.0078Z"
+                  fill="black"
+                />
+              </svg>
+              <span>Menu</span>
+            </div>
+            <div class="header_button">
+              <span> Become a Member</span>
+              <span class="arrow">
+                <svg
+                  width="22"
+                  height="20"
+                  viewBox="0 0 22 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_28_192)">
+                    <path
+                      d="M1.71855 10.1333C1.71855 9.85948 1.82719 9.59692 2.02059 9.40334C2.21399 9.20975 2.47629 9.101 2.7498 9.101L16.7645 9.101L15.4239 7.76938C15.2297 7.57501 15.1206 7.31137 15.1206 7.03648C15.1206 6.76159 15.2297 6.49796 15.4239 6.30358C15.618 6.1092 15.8814 6 16.156 6C16.4307 6 16.694 6.1092 16.8882 6.30358L19.982 9.40035C20.1251 9.54551 20.222 9.72985 20.2606 9.93009C20.2991 10.1303 20.2775 10.3375 20.1985 10.5255C20.1212 10.714 19.9898 10.8754 19.821 10.9893C19.6521 11.1032 19.4534 11.1645 19.2498 11.1655L2.7498 11.1655C2.47629 11.1655 2.21399 11.0568 2.02059 10.8632C1.82719 10.6696 1.71855 10.407 1.71855 10.1333Z"
+                      fill="#007DFF"
+                    />
+                    <path
+                      d="M15.1248 13.2299C15.124 13.0941 15.15 12.9594 15.2014 12.8336C15.2527 12.7079 15.3283 12.5935 15.4239 12.497L18.5176 9.40026C18.7118 9.20588 18.9752 9.09668 19.2498 9.09668C19.3858 9.09668 19.5204 9.12349 19.6461 9.17558C19.7717 9.22766 19.8858 9.30401 19.982 9.40026C20.0781 9.4965 20.1544 9.61076 20.2065 9.73652C20.2585 9.86227 20.2853 9.99705 20.2853 10.1332C20.2853 10.4081 20.1762 10.6717 19.982 10.8661L16.8882 13.9628C16.7924 14.0596 16.6783 14.1364 16.5527 14.1888C16.427 14.2412 16.2922 14.2682 16.1561 14.2682C16.0199 14.2682 15.8851 14.2412 15.7595 14.1888C15.6338 14.1364 15.5197 14.0596 15.4239 13.9628C15.3283 13.8664 15.2527 13.752 15.2014 13.6262C15.15 13.5005 15.124 13.3658 15.1248 13.2299Z"
+                      fill="#007DFF"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_28_192">
+                      <rect
+                        width="20"
+                        height="22"
+                        fill="white"
+                        transform="translate(22) rotate(90)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="menu">
+      <div class="menu_max">
+        <div class="menu_box">
+          <div class="flex">
+            <div class="menu_logo">
+              <img src="./img/logo.svg" alt="" />
+            </div>
+            <div class="close">
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.7017 10.8615C11.7568 10.9167 11.8006 10.9822 11.8304 11.0542C11.8603 11.1263 11.8757 11.2036 11.8757 11.2816C11.8757 11.3596 11.8603 11.4368 11.8304 11.5089C11.8006 11.581 11.7568 11.6465 11.7017 11.7017C11.6465 11.7568 11.581 11.8006 11.5089 11.8304C11.4368 11.8603 11.3596 11.8757 11.2816 11.8757C11.2036 11.8757 11.1263 11.8603 11.0542 11.8304C10.9822 11.8006 10.9167 11.7568 10.8615 11.7017L5.93783 6.77724L1.01416 11.7017C0.902747 11.8131 0.75164 11.8757 0.59408 11.8757C0.43652 11.8757 0.285414 11.8131 0.174002 11.7017C0.0625904 11.5902 3.10588e-09 11.4391 0 11.2816C-3.10588e-09 11.124 0.0625904 10.9729 0.174002 10.8615L5.09842 5.93783L0.174002 1.01416C0.0625904 0.902747 -1.17391e-09 0.75164 0 0.59408C1.17391e-09 0.43652 0.0625904 0.285414 0.174002 0.174002C0.285414 0.0625904 0.43652 1.17391e-09 0.59408 0C0.75164 -1.17391e-09 0.902747 0.0625904 1.01416 0.174002L5.93783 5.09842L10.8615 0.174002C10.9729 0.0625904 11.124 -3.10588e-09 11.2816 0C11.4391 3.10588e-09 11.5902 0.0625904 11.7017 0.174002C11.8131 0.285414 11.8757 0.43652 11.8757 0.59408C11.8757 0.75164 11.8131 0.902747 11.7017 1.01416L6.77724 5.93783L11.7017 10.8615Z"
+                  fill="black"
+                />
+              </svg>
+            </div>
+          </div>
+          <ul class="menu_nav">
+            <li class="menu_item">
+              <div class="flex_gap">
+                <a href="">About Icc</a>
+                <span class="arrow"></span>
+              </div>
+            </li>
+            <li class="menu_item">
+              <div class="flex_gap">
+                <a href="">Area of work</a>
+                <span class="arrow"></span>
+              </div>
+              <ul class="sub-menu">
+                <li>
+                  <a href="">Commissions</a>
+                </li>
+                <li>
+                  <a href="">Products & Services</a>
+                </li>
+                <li>
+                  <a href="">Discover SME360X</a>
+                </li>
+                <li>
+                  <a href="">ICC Network</a>
+                </li>
+                <li>
+                  <a href="">ICC Partnership</a>
+                </li>
+                <li>
+                  <a href="">Special Projects</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu_item">
+              <div class="flex_gap">
+                <a href="">Icc Global</a>
+                <span class="arrow"></span>
+              </div>
+            </li>
+            <li class="menu_item">
+              <div class="flex_gap">
+                <a href="">News & media</a>
+                <span class="arrow"></span>
+              </div>
+            </li>
+            <li class="menu_item">
+              <div class="flex_gap">
+                <a href="">events</a>
+                <span class="arrow"></span>
+              </div>
+            </li>
+            <li class="menu_item">
+              <div class="flex_gap">
+                <a href="">events</a>
+                <span class="arrow"></span>
+              </div>
+            </li>
+            <li class="menu_item">
+              <div class="flex_gap">
+                <a href="">gallery</a>
+              </div>
+            </li>
+            <li class="menu_item">
+              <div class="flex_gap">
+                <a href="">Newsroom</a>
+              </div>
+            </li>
+            <li class="menu_item">
+              <div class="flex_gap">
+                <a href="">Contact Us</a>
+              </div>
+            </li>
+          </ul>
+          <div class="flex_bottom pt_40">
+            <a href="">
+              <img src="./img/ig.svg" alt="" />
+            </a>
+            <a href="">
+              <img src="./img/Facebook.svg" alt="" />
+            </a>
+            <a href="">
+              <img src="./img/Twitter.svg" alt="" />
+            </a>
+          </div>
+          <div class="menu_position">
+            <img src="./img/map.png" alt="" />
+          </div>
+        </div>
+        <div class="menu_img">
+          <img src="./img/Menu.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <div
+      class="banner_inner"
+      style="background-image: url(./img/banner_inner.png)"
+    >
+      <div class="container mw_1224">
+        <div class="banner_inner-box">
+          <div class="banner_inner-max">
+            <!-- <div class="banner_inner-max-one">Arbitration and Alternative Dispute Resolution (ADR) Commission</div> -->
+          </div>
+          <div class="banner_inner-flex">
+            <a class="text-one" href="">Home</a>
+            <span>
+              <svg
+                width="8"
+                height="12"
+                viewBox="0 0 8 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0.862061 1.13798L5.72406 5.99998L0.862061 10.862L1.80473 11.8046L7.60939 5.99998L1.80473 0.195312L0.862061 1.13798Z"
+                  fill="white"
+                />
+              </svg>
+            </span>
+            <div class="text-two">Policy Commissions</div>
+            <span>
+              <svg
+                width="8"
+                height="12"
+                viewBox="0 0 8 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0.862061 1.13798L5.72406 5.99998L0.862061 10.862L1.80473 11.8046L7.60939 5.99998L1.80473 0.195312L0.862061 1.13798Z"
+                  fill="white"
+                />
+              </svg>
+            </span>
+            <!-- <div class="text-two">Arbitration and Alternative Dispute Resolution (ADR) Commission</div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mandate">
+      <div class="container mw_1224">
+        <div class="mandate_max">
+          <div class="mandate_text">
+            <div class="mandate_text-one">Commission mandate</div>
+            <div class="mandate_text-two">
+              The commission is a unique think tank and rule-making body for ICC
+              Dispute Resolution Services. In its research capacity, the
+              commission proposes new policies and tools by producing reports,
+              guidelines or best practices to innovate and promote efficient and
+              cost-effective dispute resolution in view of current developments.
+              Together with the ICC Court and the ICC Centre for ADR it also
+              drafts and revises the ICC’s range of rules for dispute
+              resolution, including the ICC Rules of Arbitration and the ICC
+              Rules of Mediation
+            </div>
+          </div>
+          <div class="mandate_image">
+            <img src="./img/mandate1.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container mw_1224">
+      <div class="organizations_box">
+        <div class="organizations_flex">
+          <div class="international_item">
+            <div class="international_title">
+              <div
+                class="international_button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseExample"
+                aria-expanded="false"
+                aria-controls="collapseExample"
+              >
+                <span>Local Commission</span>
+                <svg
+                  width="10"
+                  height="8"
+                  viewBox="0 0 10 8"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9.5002 -0.00029616L0.5002 -0.000296946C0.409079 -1.13289e-05 0.319762 0.0251204 0.241862 0.0723921C0.163961 0.119664 0.100429 0.187286 0.0581023 0.267979C0.0157744 0.348673 -0.00374351 0.439383 0.00164856 0.530345C0.00703967 0.621306 0.0371367 0.709075 0.0886999 0.784203L4.5887 7.2842C4.7752 7.5537 5.2242 7.5537 5.4112 7.2842L9.9112 0.784204C9.96329 0.709232 9.99383 0.621419 9.99952 0.530306C10.0052 0.439193 9.98581 0.348265 9.94345 0.2674C9.90108 0.186535 9.83736 0.118827 9.75922 0.0716319C9.68108 0.0244369 9.59149 -0.000440156 9.5002 -0.00029616Z"
+                    fill="black"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <div class="collapse" id="collapseExample" style="">
+              <div class="international_text">
+                <div class="international_text-one">
+                  <p>
+                    The International Court of Arbitration is the world’s
+                    leading arbitral institution. Since 1923, ICC has been
+                    helping to resolve disputes in international commercial and
+                    investment disputes.
+                  </p>
+                  <p>
+                    We perform an essential role by providing individuals,
+                    businesses and governments alike with a variety of
+                    customizable services for every stage of their dispute.
+                  </p>
+                  <p>
+                    Although we are called a court in name, we do not make
+                    formal judgments on disputed matters. Instead, we exercise
+                    judicial supervision of arbitration proceedings. Our
+                    responsibilities include:
+                  </p>
+                  <p>
+                    • Confirming, appointing and replacing arbitrators, as well
+                    as deciding on any challenges made against them
+                  </p>
+                  <p>
+                    • Monitoring the arbitral process to make certain that it is
+                    performed properly and with the required speed and
+                    efficiency necessary
+                  </p>
+                  <p>
+                    • Scrutinising and approving all arbitral awards to
+                    reinforce quality and enforceability
+                  </p>
+                  <p>
+                    • Setting, managing and — if necessary — adjusting fees and
+                    advances
+                  </p>
+                  <p>
+                    • Overseeing emergency proceedings before the start of the
+                    arbitration
+                  </p>
+                  <p>
+                    Our purpose is to ensure proper application of the ICC
+                    rules, as well as assist parties and arbitrators in
+                    overcoming procedural obstacles. These efforts are supported
+                    by the court’s secretariat, which is made up of more than 80
+                    lawyers and support
+                  </p>
+                </div>
+                <div class="international_text-two">
+                  ICC Court Members: Appointments Overview - Local Appointments
+                </div>
+                <div class="international_text-one">
+                  <p>
+                    Members of the ICC Court are appointed for three-year terms
+                    by the ICC World Council. This is done on the proposal of
+                    one member from ICC national committees and other ICC
+                    groups, or upon proposal by the President of the Court.
+                  </p>
+                  <p>
+                    Once appointed, ICC Court members must remain independent
+                    from national committees in the performance of their
+                    functions. Alternate members are appointed by the World
+                    Council on the proposal of the ICC Court’s President.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="international_item">
+            <div class="international_title">
+              <div
+                class="international_button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseExample1"
+                aria-expanded="false"
+                aria-controls="collapseExample1"
+              >
+                <span>Global Commission</span>
+                <svg
+                  width="10"
+                  height="8"
+                  viewBox="0 0 10 8"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9.5002 -0.00029616L0.5002 -0.000296946C0.409079 -1.13289e-05 0.319762 0.0251204 0.241862 0.0723921C0.163961 0.119664 0.100429 0.187286 0.0581023 0.267979C0.0157744 0.348673 -0.00374351 0.439383 0.00164856 0.530345C0.00703967 0.621306 0.0371367 0.709075 0.0886999 0.784203L4.5887 7.2842C4.7752 7.5537 5.2242 7.5537 5.4112 7.2842L9.9112 0.784204C9.96329 0.709232 9.99383 0.621419 9.99952 0.530306C10.0052 0.439193 9.98581 0.348265 9.94345 0.2674C9.90108 0.186535 9.83736 0.118827 9.75922 0.0716319C9.68108 0.0244369 9.59149 -0.000440156 9.5002 -0.00029616Z"
+                    fill="black"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <div class="collapse" id="collapseExample1" style="">
+              <div class="international_text">
+                <div class="international_text-one">
+                  <p>
+                    The International Court of Arbitration is the world’s
+                    leading arbitral institution. Since 1923, ICC has been
+                    helping to resolve disputes in international commercial and
+                    investment disputes.
+                  </p>
+                  <p>
+                    We perform an essential role by providing individuals,
+                    businesses and governments alike with a variety of
+                    customizable services for every stage of their dispute.
+                  </p>
+                  <p>
+                    Although we are called a court in name, we do not make
+                    formal judgments on disputed matters. Instead, we exercise
+                    judicial supervision of arbitration proceedings. Our
+                    responsibilities include:
+                  </p>
+                  <p>
+                    • Confirming, appointing and replacing arbitrators, as well
+                    as deciding on any challenges made against them
+                  </p>
+                  <p>
+                    • Monitoring the arbitral process to make certain that it is
+                    performed properly and with the required speed and
+                    efficiency necessary
+                  </p>
+                  <p>
+                    • Scrutinising and approving all arbitral awards to
+                    reinforce quality and enforceability
+                  </p>
+                  <p>
+                    • Setting, managing and — if necessary — adjusting fees and
+                    advances
+                  </p>
+                  <p>
+                    • Overseeing emergency proceedings before the start of the
+                    arbitration
+                  </p>
+                  <p>
+                    Our purpose is to ensure proper application of the ICC
+                    rules, as well as assist parties and arbitrators in
+                    overcoming procedural obstacles. These efforts are supported
+                    by the court’s secretariat, which is made up of more than 80
+                    lawyers and support
+                  </p>
+                </div>
+                <div class="international_text-two">
+                  ICC Court Members: Appointments Overview - Local Appointments
+                </div>
+                <div class="international_text-one">
+                  <p>
+                    Members of the ICC Court are appointed for three-year terms
+                    by the ICC World Council. This is done on the proposal of
+                    one member from ICC national committees and other ICC
+                    groups, or upon proposal by the President of the Court.
+                  </p>
+                  <p>
+                    Once appointed, ICC Court members must remain independent
+                    from national committees in the performance of their
+                    functions. Alternate members are appointed by the World
+                    Council on the proposal of the ICC Court’s President.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="documents">
+      <div class="container mw_1224">
+        <div class="documents_text">
+          <div class="documents_text-one">Key Documents</div>
+          <div class="documents_text-two">
+            Lorem ipsum dolor sit amet consectetur. Risus etiam porta ultricies
+            bibendum velit lobortis egestas nunc.
+          </div>
+        </div>
+        <div class="documents_flex">
+          <div class="documents_item">
+            <div class="documents_min">
+              <div class="documents_min-one">Document</div>
+              <div class="documents_min-two">PDF</div>
+            </div>
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g opacity="0.15">
+                <path
+                  d="M31.4894 2.22266H12.3449C10.6779 2.22559 9.08 2.88911 7.90124 4.06787C6.72248 5.24663 6.05896 6.84453 6.05602 8.51154V10.0004C4.9603 10.2654 3.98591 10.892 3.29033 11.7792C2.59475 12.6663 2.21861 13.762 2.22269 14.8893V32.7671C2.22562 34.0952 2.75452 35.3681 3.69365 36.3072C4.63278 37.2464 5.90567 37.7753 7.2338 37.7782H25.1116C26.2389 37.7823 27.3346 37.4062 28.2217 36.7106C29.1089 36.015 29.7355 35.0406 30.0005 33.9449H31.5227C33.1839 33.9332 34.7733 33.2658 35.9449 32.088C37.1164 30.9101 37.7754 29.3173 37.7782 27.656V8.51154C37.7753 6.84453 37.1118 5.24663 35.933 4.06787C34.7543 2.88911 33.1564 2.22559 31.4894 2.22266ZM27.7782 32.7671C27.7782 33.4684 27.4996 34.1411 27.0037 34.637C26.5078 35.1329 25.8352 35.4115 25.1338 35.4115H7.2338C6.53245 35.4115 5.85983 35.1329 5.3639 34.637C4.86797 34.1411 4.58936 33.4684 4.58936 32.7671V14.8893C4.58642 14.5402 4.65266 14.1939 4.78424 13.8705C4.91582 13.5471 5.11014 13.253 5.35599 13.005C5.60185 12.7571 5.89436 12.5603 6.21666 12.4261C6.53895 12.2918 6.88465 12.2226 7.2338 12.2227H25.1116C25.4626 12.2197 25.8107 12.2866 26.1356 12.4196C26.4604 12.5526 26.7556 12.7489 27.0038 12.9971C27.252 13.2453 27.4483 13.5405 27.5813 13.8653C27.7143 14.1902 27.7812 14.5383 27.7782 14.8893V32.7671ZM35.4338 27.6671C35.4338 28.7073 35.0206 29.705 34.285 30.4405C33.5494 31.1761 32.5518 31.5893 31.5116 31.5893H30.1227V14.9227C30.1256 14.2622 29.9982 13.6076 29.7478 12.9965C29.4975 12.3853 29.129 11.8295 28.6635 11.361C28.198 10.8924 27.6447 10.5202 27.0352 10.2658C26.4257 10.0114 25.772 9.87967 25.1116 9.87821H8.44491V8.51154C8.44491 7.47131 8.85814 6.47367 9.5937 5.73812C10.3293 5.00256 11.3269 4.58932 12.3671 4.58932H31.4894C32.5296 4.58932 33.5272 5.00256 34.2628 5.73812C34.9983 6.47367 35.4116 7.47131 35.4116 8.51154L35.4338 27.6671Z"
+                  fill="#007DFF"
+                />
+              </g>
+            </svg>
+          </div>
+          <div class="documents_item">
+            <div class="documents_min">
+              <div class="documents_min-one">Document</div>
+              <div class="documents_min-two">PDF</div>
+            </div>
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g opacity="0.15">
+                <path
+                  d="M31.4894 2.22266H12.3449C10.6779 2.22559 9.08 2.88911 7.90124 4.06787C6.72248 5.24663 6.05896 6.84453 6.05602 8.51154V10.0004C4.9603 10.2654 3.98591 10.892 3.29033 11.7792C2.59475 12.6663 2.21861 13.762 2.22269 14.8893V32.7671C2.22562 34.0952 2.75452 35.3681 3.69365 36.3072C4.63278 37.2464 5.90567 37.7753 7.2338 37.7782H25.1116C26.2389 37.7823 27.3346 37.4062 28.2217 36.7106C29.1089 36.015 29.7355 35.0406 30.0005 33.9449H31.5227C33.1839 33.9332 34.7733 33.2658 35.9449 32.088C37.1164 30.9101 37.7754 29.3173 37.7782 27.656V8.51154C37.7753 6.84453 37.1118 5.24663 35.933 4.06787C34.7543 2.88911 33.1564 2.22559 31.4894 2.22266ZM27.7782 32.7671C27.7782 33.4684 27.4996 34.1411 27.0037 34.637C26.5078 35.1329 25.8352 35.4115 25.1338 35.4115H7.2338C6.53245 35.4115 5.85983 35.1329 5.3639 34.637C4.86797 34.1411 4.58936 33.4684 4.58936 32.7671V14.8893C4.58642 14.5402 4.65266 14.1939 4.78424 13.8705C4.91582 13.5471 5.11014 13.253 5.35599 13.005C5.60185 12.7571 5.89436 12.5603 6.21666 12.4261C6.53895 12.2918 6.88465 12.2226 7.2338 12.2227H25.1116C25.4626 12.2197 25.8107 12.2866 26.1356 12.4196C26.4604 12.5526 26.7556 12.7489 27.0038 12.9971C27.252 13.2453 27.4483 13.5405 27.5813 13.8653C27.7143 14.1902 27.7812 14.5383 27.7782 14.8893V32.7671ZM35.4338 27.6671C35.4338 28.7073 35.0206 29.705 34.285 30.4405C33.5494 31.1761 32.5518 31.5893 31.5116 31.5893H30.1227V14.9227C30.1256 14.2622 29.9982 13.6076 29.7478 12.9965C29.4975 12.3853 29.129 11.8295 28.6635 11.361C28.198 10.8924 27.6447 10.5202 27.0352 10.2658C26.4257 10.0114 25.772 9.87967 25.1116 9.87821H8.44491V8.51154C8.44491 7.47131 8.85814 6.47367 9.5937 5.73812C10.3293 5.00256 11.3269 4.58932 12.3671 4.58932H31.4894C32.5296 4.58932 33.5272 5.00256 34.2628 5.73812C34.9983 6.47367 35.4116 7.47131 35.4116 8.51154L35.4338 27.6671Z"
+                  fill="#007DFF"
+                />
+              </g>
+            </svg>
+          </div>
+          <div class="documents_item">
+            <div class="documents_min">
+              <div class="documents_min-one">Document</div>
+              <div class="documents_min-two">PDF</div>
+            </div>
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g opacity="0.15">
+                <path
+                  d="M31.4894 2.22266H12.3449C10.6779 2.22559 9.08 2.88911 7.90124 4.06787C6.72248 5.24663 6.05896 6.84453 6.05602 8.51154V10.0004C4.9603 10.2654 3.98591 10.892 3.29033 11.7792C2.59475 12.6663 2.21861 13.762 2.22269 14.8893V32.7671C2.22562 34.0952 2.75452 35.3681 3.69365 36.3072C4.63278 37.2464 5.90567 37.7753 7.2338 37.7782H25.1116C26.2389 37.7823 27.3346 37.4062 28.2217 36.7106C29.1089 36.015 29.7355 35.0406 30.0005 33.9449H31.5227C33.1839 33.9332 34.7733 33.2658 35.9449 32.088C37.1164 30.9101 37.7754 29.3173 37.7782 27.656V8.51154C37.7753 6.84453 37.1118 5.24663 35.933 4.06787C34.7543 2.88911 33.1564 2.22559 31.4894 2.22266ZM27.7782 32.7671C27.7782 33.4684 27.4996 34.1411 27.0037 34.637C26.5078 35.1329 25.8352 35.4115 25.1338 35.4115H7.2338C6.53245 35.4115 5.85983 35.1329 5.3639 34.637C4.86797 34.1411 4.58936 33.4684 4.58936 32.7671V14.8893C4.58642 14.5402 4.65266 14.1939 4.78424 13.8705C4.91582 13.5471 5.11014 13.253 5.35599 13.005C5.60185 12.7571 5.89436 12.5603 6.21666 12.4261C6.53895 12.2918 6.88465 12.2226 7.2338 12.2227H25.1116C25.4626 12.2197 25.8107 12.2866 26.1356 12.4196C26.4604 12.5526 26.7556 12.7489 27.0038 12.9971C27.252 13.2453 27.4483 13.5405 27.5813 13.8653C27.7143 14.1902 27.7812 14.5383 27.7782 14.8893V32.7671ZM35.4338 27.6671C35.4338 28.7073 35.0206 29.705 34.285 30.4405C33.5494 31.1761 32.5518 31.5893 31.5116 31.5893H30.1227V14.9227C30.1256 14.2622 29.9982 13.6076 29.7478 12.9965C29.4975 12.3853 29.129 11.8295 28.6635 11.361C28.198 10.8924 27.6447 10.5202 27.0352 10.2658C26.4257 10.0114 25.772 9.87967 25.1116 9.87821H8.44491V8.51154C8.44491 7.47131 8.85814 6.47367 9.5937 5.73812C10.3293 5.00256 11.3269 4.58932 12.3671 4.58932H31.4894C32.5296 4.58932 33.5272 5.00256 34.2628 5.73812C34.9983 6.47367 35.4116 7.47131 35.4116 8.51154L35.4338 27.6671Z"
+                  fill="#007DFF"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="whyy">
+      <div class="container mw_1304">
+        <div class="whyy_bottom">
+          <div class="whyy_circle-1"></div>
+          <div class="whyy_circle-3"></div>
+          <div class="whyy_flex">
+            <div class="why_box">
+              <div class="whyy_text-three">
+                <div class="whyy_circle-2"></div>
+                Sign up to participate
+              </div>
+              <a class="whyy_button" href="">
+                <span>Sign Up Here</span>
+                <span class="arrow">
+                    <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_28_192)">
+                        <path d="M1.71855 10.1333C1.71855 9.85948 1.82719 9.59692 2.02059 9.40334C2.21399 9.20975 2.47629 9.101 2.7498 9.101L16.7645 9.101L15.4239 7.76938C15.2297 7.57501 15.1206 7.31137 15.1206 7.03648C15.1206 6.76159 15.2297 6.49796 15.4239 6.30358C15.618 6.1092 15.8814 6 16.156 6C16.4307 6 16.694 6.1092 16.8882 6.30358L19.982 9.40035C20.1251 9.54551 20.222 9.72985 20.2606 9.93009C20.2991 10.1303 20.2775 10.3375 20.1985 10.5255C20.1212 10.714 19.9898 10.8754 19.821 10.9893C19.6521 11.1032 19.4534 11.1645 19.2498 11.1655L2.7498 11.1655C2.47629 11.1655 2.21399 11.0568 2.02059 10.8632C1.82719 10.6696 1.71855 10.407 1.71855 10.1333Z" fill="#007DFF"></path>
+                        <path d="M15.1248 13.2299C15.124 13.0941 15.15 12.9594 15.2014 12.8336C15.2527 12.7079 15.3283 12.5935 15.4239 12.497L18.5176 9.40026C18.7118 9.20588 18.9752 9.09668 19.2498 9.09668C19.3858 9.09668 19.5204 9.12349 19.6461 9.17558C19.7717 9.22766 19.8858 9.30401 19.982 9.40026C20.0781 9.4965 20.1544 9.61076 20.2065 9.73652C20.2585 9.86227 20.2853 9.99705 20.2853 10.1332C20.2853 10.4081 20.1762 10.6717 19.982 10.8661L16.8882 13.9628C16.7924 14.0596 16.6783 14.1364 16.5527 14.1888C16.427 14.2412 16.2922 14.2682 16.1561 14.2682C16.0199 14.2682 15.8851 14.2412 15.7595 14.1888C15.6338 14.1364 15.5197 14.0596 15.4239 13.9628C15.3283 13.8664 15.2527 13.752 15.2014 13.6262C15.15 13.5005 15.124 13.3658 15.1248 13.2299Z" fill="#007DFF"></path>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_28_192">
+                          <rect width="20" height="22" fill="white" transform="translate(22) rotate(90)"></rect>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                </span>
+              </a>
+            </div>
+            <div class="whyy_text-two">
+              ICC Qatar members are entitled to participate in the Commission.
+              To participate, please fill out your details and receive
+              communications related to the Commission.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer mt_80">
+        <div class="container">
+          <div class="footer_max">
+            <div class="footer_top">
+              <div class="footer_child">
+                <div class="footer_heading">
+                  International Chamber of Commerce Qatar
+                </div>
+                <div class="footer_stext">
+                  The World’s Leading Arbitration Institution
+                </div>
+              </div>
+              <div class="footer_child">
+                <div class="footer_heading">Quick Links</div>
+                <ul>
+                  <li>
+                    <a href="">About Us</a>
+                  </li>
+                  <li>
+                    <a href="">Resources For Business</a>
+                  </li>
+                  <li>
+                    <a href="">Policy Commissions</a>
+                  </li>
+                  <li>
+                    <a href="">Events</a>
+                  </li>
+                  <li>
+                    <a href="">Membership</a>
+                  </li>
+                  <li>
+                    <a href="">Gallery</a>
+                  </li>
+                  <li>
+                    <a href="">Special Projects</a>
+                  </li>
+                  <li>
+                    <a href="">Newsroom</a>
+                  </li>
+                  <li>
+                    <a href="">Incoterms</a>
+                  </li>
+                  <li>
+                    <a href="">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer_child">
+                <div class="footer_heading">Get email alert</div>
+                <div class="footer_stext">
+                  Stay up-to-date with all ICC Qatar news information
+                </div>
+                <a href="#" class="footer_button" style="width: 100%"
+                  >Sign Up Now</a
+                >
+              </div>
+            </div>
+            <div class="footer_bottom">
+              <div class="footer_bottom-text">
+                © 2024 | All Rights Reserved. Crafted by
+              </div>
+              <div class="flex_bottom">
+                <a href="#">
+                  <img src="img/social-youtube.svg" alt="" />
+                </a>
+                <a href="">
+                  <img src="./img/ig.svg" alt="" />
+                </a>
+                <a href="">
+                  <img src="./img/Facebook.svg" alt="" />
+                </a>
+                <a href="">
+                  <img src="./img/Twitter.svg" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
