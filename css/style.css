@@ -2450,20 +2450,11 @@ body.none_scroll {
   box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   background: white;
-  padding: 20px 10px 76px;
+  padding: 10px 10px 46px;
 }
 .provides_barea {
   display: grid;
   grid-gap: 10px;
-}
-.provides_icons {
-  width: 50px;
-  height: 50px;
-  border: 1px dashed #007dff;
-  border-radius: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .provides_text-one {
   font-family: "Helvetica";
@@ -2502,9 +2493,21 @@ body.none_scroll {
 }
 .provides_text-three {
   position: absolute;
-  bottom: 20px;
+  bottom: 10px;
   left: 10px;
   right: 10px;
+}
+.provides_text-three a {
+  font-family: "Barlow";
+  font-size: 16px;
+  line-height: 1.6;
+  color: #007DFF;
+}
+@media (max-width: 767px) {
+  .provides_text-three a {
+    font-size: 14px;
+    line-height: 1.4;
+  }
 }
 .provides_bottom {
   display: flex;
@@ -3029,6 +3032,74 @@ body.none_scroll {
     grid-gap: 40px;
   }
 }
+.brief_grid {
+  display: grid;
+  grid-template-columns: 1fr 439px;
+  grid-gap: 101px;
+}
+@media (max-width: 1200px) {
+  .brief_grid {
+    grid-gap: 73px;
+    grid-template-columns: 1fr 387px;
+  }
+}
+@media (max-width: 992px) {
+  .brief_grid {
+    grid-template-columns: 1fr;
+    grid-gap: 40px;
+  }
+}
+@media (max-width: 450px) {
+  .brief_grid {
+    grid-gap: 30px;
+  }
+}
+.brief_list {
+  order: 3;
+}
+.brief_list a {
+  display: block;
+  padding: 10px 25px 10px 10px;
+  position: relative;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 2.3333333333;
+  transition: all 0.2s ease-out 0s;
+  -webkit-transition: all 0.2s ease-out 0s;
+  border-bottom: 1px solid #D9D6CE;
+  color: #444444;
+}
+@media (max-width: 992px) {
+  .brief_list a {
+    font-size: 14px;
+  }
+}
+@media (max-width: 450px) {
+  .brief_list a {
+    font-size: 13px;
+  }
+}
+.brief_list a:hover {
+  color: #007dff;
+}
+.brief_list a:hover svg path {
+  fill: #007dff;
+}
+.brief_list a svg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 10px;
+  width: 12px;
+  height: 12px;
+  margin: auto;
+}
+.brief_list a svg path {
+  transition: all 0.2s ease-out 0s;
+  -webkit-transition: all 0.2s ease-out 0s;
+}
 @media (max-width: 992px) {
   .brief_text {
     order: 2;
@@ -3158,8 +3229,14 @@ body.none_scroll {
     margin: 40px 0 50px 0;
   }
 }
-.international_box {
-  border-top: 1px solid black;
+.international_heading {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.46;
+  color: #000000;
+  margin-bottom: 20px;
 }
 .international_item {
   border-bottom: 1px solid #d9d6ce;
@@ -3317,7 +3394,12 @@ body.none_scroll {
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  color: #abafb3;
+}
+.alert_item input::-moz-placeholder {
+  color: #ABAFB3;
+}
+.alert_item input::placeholder {
+  color: #ABAFB3;
 }
 @media (max-width: 992px) {
   .alert_item input {
@@ -3332,7 +3414,17 @@ body.none_scroll {
 .alert_item select {
   line-height: 53px;
   padding: 0px 17px;
-  font-size: 18px;
+  font-size: 16px;
+}
+@media (max-width: 992px) {
+  .alert_item select {
+    font-size: 15px;
+  }
+}
+@media (max-width: 450px) {
+  .alert_item select {
+    font-size: 14px;
+  }
 }
 .alert_box {
   display: grid;
@@ -3366,11 +3458,12 @@ body.none_scroll {
   height: 18px;
   border: 1px solid #616161;
   border-radius: 1px;
+  margin: 0;
 }
 .alert_check .form-check-input[type=checkbox] {
   border-radius: 1px;
 }
-.alert_check label .one {
+.alert_check .one {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
@@ -3379,16 +3472,16 @@ body.none_scroll {
   color: #000000;
 }
 @media (max-width: 992px) {
-  .alert_check label .one {
+  .alert_check .one {
     font-size: 14px;
   }
 }
 @media (max-width: 450px) {
-  .alert_check label .one {
+  .alert_check .one {
     font-size: 13px;
   }
 }
-.alert_check label .two {
+.alert_check .two {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
@@ -3398,12 +3491,12 @@ body.none_scroll {
   margin-top: 2px;
 }
 @media (max-width: 992px) {
-  .alert_check label .two {
+  .alert_check .two {
     font-size: 13px;
   }
 }
 @media (max-width: 450px) {
-  .alert_check label .two {
+  .alert_check .two {
     font-size: 12px;
   }
 }
