@@ -397,21 +397,117 @@
               </label>
             </div>
             <div class="alert_check">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value=""
-                id="flexCheckDefault3"
-              />
               <label class="form-check-label" for="flexCheckDefault3">
-                <div class="one">Trade and Investment</div>
+                <p>
+                  <label class="form-check-label"><br>
+                    <span class="wpcf7-form-control-wrap" data-name="services">
+                      <span class="wpcf7-form-control wpcf7-checkbox">
+                        <span class="wpcf7-list-item first last">
+                          <label><input type="checkbox" name="services[]" value="Trade and Investment"><span class="wpcf7-list-item-label">Trade and Investment</span></label>
+                        </span>
+                      </span>
+                    </span><br>
+                  </label>
+                </p>
                 <div class="two">
-                  Our commissions are organized under 5 knowledge hubs. By
-                  ticking the Trade and Investment, you will receive updates on
-                  the following special projects and commissions that fall under
-                  it; including: Arbitration and ADR, Competition, Customs and
-                  Trade Facilitation, Commercial Law and Practice, Marketing and
-                  Advertising, Taxation & Trade and Investment.
+                  <div class="text">
+                    Our commissions are organized under 5 knowledge hubs. By ticking the Trade and Investment, you will receive updates on the following special projects and commissions that fall under it; including:
+                  </div>
+                  <div class="checkboxs">
+                    <div class="sub">
+                      <p>
+                        <label class="form-check-label"><br>
+                          <span class="wpcf7-form-control-wrap" data-name="services">
+                            <span class="wpcf7-form-control wpcf7-checkbox">
+                              <span class="wpcf7-list-item first last">
+                                <label><input type="checkbox" name="xx[]" value="Trade and Investment"><span class="wpcf7-list-item-label">Arbitration and ADR</span></label>
+                              </span>
+                            </span>
+                          </span><br>
+                        </label>
+                      </p>
+                    </div>
+                    <div class="sub">
+                      <p>
+                        <label class="form-check-label"><br>
+                          <span class="wpcf7-form-control-wrap" data-name="services">
+                            <span class="wpcf7-form-control wpcf7-checkbox">
+                              <span class="wpcf7-list-item first last">
+                                <label><input type="checkbox" name="xx[]" value="Trade and Investment"><span class="wpcf7-list-item-label">Competition</span></label>
+                              </span>
+                            </span>
+                          </span><br>
+                        </label>
+                      </p>
+                    </div>
+                    <div class="sub">
+                      <p>
+                        <label class="form-check-label"><br>
+                          <span class="wpcf7-form-control-wrap" data-name="services">
+                            <span class="wpcf7-form-control wpcf7-checkbox">
+                              <span class="wpcf7-list-item first last">
+                                <label><input type="checkbox" name="services[]" value="Trade and Investment"><span class="wpcf7-list-item-label">Customs and
+                                  Trade Facilitation</span></label>
+                              </span>
+                            </span>
+                          </span><br>
+                        </label>
+                      </p>
+                    </div>
+                    <div class="sub">
+                      <p>
+                        <label class="form-check-label"><br>
+                          <span class="wpcf7-form-control-wrap" data-name="services">
+                            <span class="wpcf7-form-control wpcf7-checkbox">
+                              <span class="wpcf7-list-item first last">
+                                <label><input type="checkbox" name="services[]" value="Trade and Investment"><span class="wpcf7-list-item-label">Commercial Law and Practice</span></label>
+                              </span>
+                            </span>
+                          </span><br>
+                        </label>
+                      </p>
+                    </div>
+                    <div class="sub">
+                      <p>
+                        <label class="form-check-label"><br>
+                          <span class="wpcf7-form-control-wrap" data-name="services">
+                            <span class="wpcf7-form-control wpcf7-checkbox">
+                              <span class="wpcf7-list-item first last">
+                                <label><input type="checkbox" name="services[]" value="Trade and Investment"><span class="wpcf7-list-item-label">Marketing and
+                                  Advertising</span></label>
+                              </span>
+                            </span>
+                          </span><br>
+                        </label>
+                      </p>
+                    </div>
+                    <div class="sub">
+                      <p>
+                        <label class="form-check-label"><br>
+                          <span class="wpcf7-form-control-wrap" data-name="services">
+                            <span class="wpcf7-form-control wpcf7-checkbox">
+                              <span class="wpcf7-list-item first last">
+                                <label><input type="checkbox" name="services[]" value="Trade and Investment"><span class="wpcf7-list-item-label">Taxation</span></label>
+                              </span>
+                            </span>
+                          </span><br>
+                        </label>
+                      </p>
+                    </div>
+                    <div class="sub">
+                      <p>
+                        <label class="form-check-label"><br>
+                          <span class="wpcf7-form-control-wrap" data-name="services">
+                            <span class="wpcf7-form-control wpcf7-checkbox">
+                              <span class="wpcf7-list-item first last">
+                                <label><input type="checkbox" name="services[]" value="Trade and Investment"><span class="wpcf7-list-item-label">Trade and Investment</span></label>
+                              </span>
+                            </span>
+                          </span><br>
+                        </label>
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </label>
             </div>
@@ -549,6 +645,14 @@
           </button>
         </form>
       </div>
+      <script>
+        $(document).ready(function () {
+          jQuery(document).on('change', 'input[type="checkbox"]', function(){
+            var name = jQuery(this).attr('name');
+            jQuery(this).closest('.alert_check').find('.two input[type=checkbox]').prop("checked", true);
+          });
+        });
+      </script>
     </div>
 
     <footer>

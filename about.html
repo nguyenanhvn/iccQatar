@@ -1,914 +1,639 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="./js/jquery.js"></script>
-    <script src="./js/swiper-bundle.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
-    <script src="./js/mani.js"></script>
-    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="./css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
-  <body>
-    <header>
-      <div class="header">
-        <div class="header_max">
-          <a class="header_logo" href="">
-            <img src="./img/logo.svg" alt="" />
-          </a>
-          <div class="header_box">
-            <div class="header_search">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M8.99219 17.9922C7.74219 17.9922 6.57031 17.7578 5.47656 17.2891C4.38281 16.8203 3.42969 16.1797 2.61719 15.3672C1.80469 14.5547 1.16406 13.6016 0.695312 12.5078C0.226562 11.4141 -0.0078125 10.2422 -0.0078125 8.99219C-0.0078125 7.74219 0.226562 6.57031 0.695312 5.47656C1.16406 4.38281 1.80469 3.42969 2.61719 2.61719C3.42969 1.80469 4.38281 1.16406 5.47656 0.695312C6.57031 0.226562 7.74219 -0.0078125 8.99219 -0.0078125C10.2422 -0.0078125 11.4141 0.226562 12.5078 0.695312C13.6016 1.16406 14.5547 1.80469 15.3672 2.61719C16.1797 3.42969 16.8203 4.38281 17.2891 5.47656C17.7578 6.57031 17.9922 7.74219 17.9922 8.99219C17.9922 10.2422 17.7578 11.4141 17.2891 12.5078C16.8203 13.6016 16.1797 14.5547 15.3672 15.3672C14.5547 16.1797 13.6016 16.8203 12.5078 17.2891C11.4141 17.7578 10.2422 17.9922 8.99219 17.9922ZM8.99219 2.00781C8.02344 2.00781 7.10938 2.1875 6.25 2.54688C5.40625 2.90625 4.66797 3.40234 4.03516 4.03516C3.40234 4.66797 2.90625 5.40625 2.54688 6.25C2.1875 7.10938 2.00781 8.02344 2.00781 8.99219C2.00781 9.97656 2.1875 10.8906 2.54688 11.7344C2.90625 12.5938 3.40234 13.3359 4.03516 13.9609C4.66797 14.5859 5.40625 15.0859 6.25 15.4609C7.10938 15.8203 8.02344 16 8.99219 16C9.97656 16 10.8906 15.8203 11.7344 15.4609C12.5938 15.0859 13.3359 14.5859 13.9609 13.9609C14.5859 13.3359 15.0859 12.5938 15.4609 11.7344C15.8203 10.8906 16 9.97656 16 8.99219C16 8.02344 15.8203 7.10938 15.4609 6.25C15.0859 5.40625 14.5859 4.66797 13.9609 4.03516C13.3359 3.40234 12.5938 2.90625 11.7344 2.54688C10.8906 2.1875 9.97656 2.00781 8.99219 2.00781ZM19 20.0078C18.8438 20.0078 18.7148 19.9805 18.6133 19.9258C18.5117 19.8711 18.4062 19.7969 18.2969 19.7031L14.0078 15.3906C13.8047 15.2031 13.7031 14.9727 13.7031 14.6992C13.7031 14.4258 13.8047 14.1953 14.0078 14.0078C14.1953 13.8047 14.4258 13.7031 14.6992 13.7031C14.9727 13.7031 15.2031 13.8047 15.3906 14.0078L19.7031 18.2969C19.9062 18.5 20.0078 18.7344 20.0078 19C20.0078 19.2656 19.9062 19.5 19.7031 19.7031C19.5938 19.7969 19.4883 19.8711 19.3867 19.9258C19.2852 19.9805 19.1562 20.0078 19 20.0078Z"
-                  fill="black"
-                />
-              </svg>
-              <span>Search</span>
-            </div>
-            <div class="header_menu">
-              <svg
-                width="20"
-                height="14"
-                viewBox="0 0 20 14"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M19 8.00781H1C0.703125 8.00781 0.460938 7.91406 0.273438 7.72656C0.0859375 7.53906 -0.0078125 7.29688 -0.0078125 7C-0.0078125 6.70312 0.0859375 6.46094 0.273438 6.27344C0.460938 6.08594 0.703125 5.99219 1 5.99219H19C19.2969 5.99219 19.5391 6.08594 19.7266 6.27344C19.9141 6.46094 20.0078 6.70312 20.0078 7C20.0078 7.29688 19.9141 7.53906 19.7266 7.72656C19.5391 7.91406 19.2969 8.00781 19 8.00781ZM19 2.00781H1C0.703125 2.00781 0.460938 1.91406 0.273438 1.72656C0.0859375 1.53906 -0.0078125 1.29688 -0.0078125 1C-0.0078125 0.703125 0.0859375 0.460938 0.273438 0.273438C0.460938 0.0859375 0.703125 -0.0078125 1 -0.0078125H19C19.2969 -0.0078125 19.5391 0.0859375 19.7266 0.273438C19.9141 0.460938 20.0078 0.703125 20.0078 1C20.0078 1.29688 19.9141 1.53906 19.7266 1.72656C19.5391 1.91406 19.2969 2.00781 19 2.00781ZM19 14.0078H1C0.703125 14.0078 0.460938 13.9141 0.273438 13.7266C0.0859375 13.5391 -0.0078125 13.2969 -0.0078125 13C-0.0078125 12.7031 0.0859375 12.4609 0.273438 12.2734C0.460938 12.0859 0.703125 11.9922 1 11.9922H19C19.2969 11.9922 19.5391 12.0859 19.7266 12.2734C19.9141 12.4609 20.0078 12.7031 20.0078 13C20.0078 13.2969 19.9141 13.5391 19.7266 13.7266C19.5391 13.9141 19.2969 14.0078 19 14.0078Z"
-                  fill="black"
-                />
-              </svg>
-              <span>Menu</span>
-            </div>
-            <div class="header_button">
-              <span> Become a Member</span>
-              <span class="arrow">
-                <svg
-                  width="22"
-                  height="20"
-                  viewBox="0 0 22 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g clip-path="url(#clip0_28_192)">
-                    <path
-                      d="M1.71855 10.1333C1.71855 9.85948 1.82719 9.59692 2.02059 9.40334C2.21399 9.20975 2.47629 9.101 2.7498 9.101L16.7645 9.101L15.4239 7.76938C15.2297 7.57501 15.1206 7.31137 15.1206 7.03648C15.1206 6.76159 15.2297 6.49796 15.4239 6.30358C15.618 6.1092 15.8814 6 16.156 6C16.4307 6 16.694 6.1092 16.8882 6.30358L19.982 9.40035C20.1251 9.54551 20.222 9.72985 20.2606 9.93009C20.2991 10.1303 20.2775 10.3375 20.1985 10.5255C20.1212 10.714 19.9898 10.8754 19.821 10.9893C19.6521 11.1032 19.4534 11.1645 19.2498 11.1655L2.7498 11.1655C2.47629 11.1655 2.21399 11.0568 2.02059 10.8632C1.82719 10.6696 1.71855 10.407 1.71855 10.1333Z"
-                      fill="#007DFF"
-                    />
-                    <path
-                      d="M15.1248 13.2299C15.124 13.0941 15.15 12.9594 15.2014 12.8336C15.2527 12.7079 15.3283 12.5935 15.4239 12.497L18.5176 9.40026C18.7118 9.20588 18.9752 9.09668 19.2498 9.09668C19.3858 9.09668 19.5204 9.12349 19.6461 9.17558C19.7717 9.22766 19.8858 9.30401 19.982 9.40026C20.0781 9.4965 20.1544 9.61076 20.2065 9.73652C20.2585 9.86227 20.2853 9.99705 20.2853 10.1332C20.2853 10.4081 20.1762 10.6717 19.982 10.8661L16.8882 13.9628C16.7924 14.0596 16.6783 14.1364 16.5527 14.1888C16.427 14.2412 16.2922 14.2682 16.1561 14.2682C16.0199 14.2682 15.8851 14.2412 15.7595 14.1888C15.6338 14.1364 15.5197 14.0596 15.4239 13.9628C15.3283 13.8664 15.2527 13.752 15.2014 13.6262C15.15 13.5005 15.124 13.3658 15.1248 13.2299Z"
-                      fill="#007DFF"
-                    />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_28_192">
-                      <rect
-                        width="20"
-                        height="22"
-                        fill="white"
-                        transform="translate(22) rotate(90)"
-                      />
-                    </clipPath>
-                  </defs>
-                </svg>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-    <div class="menu">
-      <div class="menu_max">
-        <div class="menu_box">
-          <div class="flex">
-            <div class="menu_logo">
-              <img src="./img/logo.svg" alt="" />
-            </div>
-            <div class="close">
-              <svg
-                width="12"
-                height="12"
-                viewBox="0 0 12 12"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M11.7017 10.8615C11.7568 10.9167 11.8006 10.9822 11.8304 11.0542C11.8603 11.1263 11.8757 11.2036 11.8757 11.2816C11.8757 11.3596 11.8603 11.4368 11.8304 11.5089C11.8006 11.581 11.7568 11.6465 11.7017 11.7017C11.6465 11.7568 11.581 11.8006 11.5089 11.8304C11.4368 11.8603 11.3596 11.8757 11.2816 11.8757C11.2036 11.8757 11.1263 11.8603 11.0542 11.8304C10.9822 11.8006 10.9167 11.7568 10.8615 11.7017L5.93783 6.77724L1.01416 11.7017C0.902747 11.8131 0.75164 11.8757 0.59408 11.8757C0.43652 11.8757 0.285414 11.8131 0.174002 11.7017C0.0625904 11.5902 3.10588e-09 11.4391 0 11.2816C-3.10588e-09 11.124 0.0625904 10.9729 0.174002 10.8615L5.09842 5.93783L0.174002 1.01416C0.0625904 0.902747 -1.17391e-09 0.75164 0 0.59408C1.17391e-09 0.43652 0.0625904 0.285414 0.174002 0.174002C0.285414 0.0625904 0.43652 1.17391e-09 0.59408 0C0.75164 -1.17391e-09 0.902747 0.0625904 1.01416 0.174002L5.93783 5.09842L10.8615 0.174002C10.9729 0.0625904 11.124 -3.10588e-09 11.2816 0C11.4391 3.10588e-09 11.5902 0.0625904 11.7017 0.174002C11.8131 0.285414 11.8757 0.43652 11.8757 0.59408C11.8757 0.75164 11.8131 0.902747 11.7017 1.01416L6.77724 5.93783L11.7017 10.8615Z"
-                  fill="black"
-                />
-              </svg>
-            </div>
-          </div>
-          <ul class="menu_nav">
-            <li class="menu_item">
-              <div class="flex_gap">
-                <a href="">About Icc</a>
-                <span class="arrow"></span>
-              </div>
-            </li>
-            <li class="menu_item">
-              <div class="flex_gap">
-                <a href="">Area of work</a>
-                <span class="arrow"></span>
-              </div>
-              <ul class="sub-menu">
-                <li>
-                  <a href="">Commissions</a>
-                </li>
-                <li>
-                  <a href="">Products & Services</a>
-                </li>
-                <li>
-                  <a href="">Discover SME360X</a>
-                </li>
-                <li>
-                  <a href="">ICC Network</a>
-                </li>
-                <li>
-                  <a href="">ICC Partnership</a>
-                </li>
-                <li>
-                  <a href="">Special Projects</a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu_item">
-              <div class="flex_gap">
-                <a href="">Icc Global</a>
-                <span class="arrow"></span>
-              </div>
-            </li>
-            <li class="menu_item">
-              <div class="flex_gap">
-                <a href="">News & media</a>
-                <span class="arrow"></span>
-              </div>
-            </li>
-            <li class="menu_item">
-              <div class="flex_gap">
-                <a href="">events</a>
-                <span class="arrow"></span>
-              </div>
-            </li>
-            <li class="menu_item">
-              <div class="flex_gap">
-                <a href="">events</a>
-                <span class="arrow"></span>
-              </div>
-            </li>
-            <li class="menu_item">
-              <div class="flex_gap">
-                <a href="">gallery</a>
-              </div>
-            </li>
-            <li class="menu_item">
-              <div class="flex_gap">
-                <a href="">Newsroom</a>
-              </div>
-            </li>
-            <li class="menu_item">
-              <div class="flex_gap">
-                <a href="">Contact Us</a>
-              </div>
-            </li>
-          </ul>
-          <div class="flex_bottom pt_40">
-            <a href="">
-              <img src="./img/ig.svg" alt="" />
-            </a>
-            <a href="">
-              <img src="./img/Facebook.svg" alt="" />
-            </a>
-            <a href="">
-              <img src="./img/Twitter.svg" alt="" />
-            </a>
-          </div>
-          <div class="menu_position">
-            <img src="./img/map.png" alt="" />
-          </div>
-        </div>
-        <div class="menu_img">
-          <img src="./img/Menu.png" alt="" />
-        </div>
-      </div>
-    </div>
-    <div
-      class="banner_inner"
-      style="background-image: url(./img/banner_inner.png)"
-    >
-      <div class="container mw_1224">
-        <div class="banner_inner-box">
-          <div class="banner_inner-max">
-            <div class="banner_inner-max-one">About Us</div>
-            <div class="banner_inner-max-two">
-              To receive updates regarding ICC news, issues and related products
-              and services direct to your inbox, please provide the information
-              requested in the form below. Be sure to indicate the topic and
-              click the “Subscribe” button to activate your subscription. You
-              can set your preferences at any time.
-            </div>
-          </div>
-          <div class="banner_inner-flex">
-            <a class="text-one" href="">Home</a>
-            <span>
-              <svg
-                width="8"
-                height="12"
-                viewBox="0 0 8 12"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M0.862061 1.13798L5.72406 5.99998L0.862061 10.862L1.80473 11.8046L7.60939 5.99998L1.80473 0.195312L0.862061 1.13798Z"
-                  fill="white"
-                />
-              </svg>
-            </span>
-            <div class="text-two">About Us</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="purpose">
-      <div class="container mw_1224">
-        <div class="purpose_box">
-          <div class="purpose_text">
-            <div class="purpose_text-one">Our Purpose</div>
-            <div class="purpose_text-two">
-              We make business work for everyone, every day, everywhere.
-            </div>
-            <div class="purpose_text-three">
-              <p>
-                Everything we do at ICC aims to promote international trade and
-                investment as vehicles for inclusive growth and prosperity.
-              </p>
-              <p>
-                From resolving disputes when they arise in international
-                commerce to supporting global efforts to streamline customs and
-                border procedures, we support multilateralism as the best way to
-                address global challenges and reach global goals.
-              </p>
-              <p>
-                Having witnessed the power of international commerce to lift
-                millions of people out of poverty, today we have our sights set
-                on the future of globalisation, working to promote inclusive and
-                sustainable growth to the benefit of all.
-              </p>
-            </div>
-          </div>
-          <div class="purpose_img">
-            <img src="./img/purpose.svg" alt="" />
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="value">
-      <div class="bg_img">
-        <img src="./img/bg_max.png" alt="" />
-      </div>
-      <div class="container mw_1224">
-        <div class="value_max">
-          <div class="value_box">
-            <div class="images">
-              <img src="./img/avata.png" alt="" />
-            </div>
-            <div class="text-one">
-              “Over the past few decades, global trade has seen remarkable
-              growth and has become more dynamic and interconnected. The
-              increased trade has led to the pressing need for greater
-              cooperation to streamline the movement of goods and services
-              across borders. This phenomenon, closely interlinked with
-              globalization, has created an intricate network of economic
-              interactions, including players from across the world. Qatar’s
-              private sector, who has a significant role to play as a key pillar
-              of the global economy, has a great opportunity to share their
-              views with policymakers and make recommendations that contribute
-              to driving growth and benefiting international trade.”
-            </div>
-            <div class="text-two">H.E. Sheikh Khalifa bin Jassim Al Thani</div>
-            <div class="text-three">Chairman, ICC Qatar</div>
-          </div>
-          <div class="value_min">
-            <div class="value_text">
-              <div class="value_text-one">Our value</div>
-              <div class="value_text-two">
-                The world is rapidly changing and we’re innovating with it but
-                our commitment to living and working according to our values is
-                still the same. That’s how we make business work for everyone,
-                every day, everywhere.
-              </div>
-            </div>
-            <div class="value_big">
-              <div class="value_flex">
-                <div class="value_item">
-                  <div class="value_item-one">
-                    <p>01</p>
-                    <span>Connected</span>
-                  </div>
-                  <div class="value_item-two">
-                    We leverage networks, technology and effective communication
-                    to unify business for a better world
-                  </div>
-                </div>
-                <div class="value_item">
-                  <div class="value_item-one">
-                    <p>02</p>
-                    <span>Pioneering</span>
-                  </div>
-                  <div class="value_item-two">
-                    It’s in our DNA to develop the standards, partnerships and
-                    initiatives which chart the course for a more prosperous
-                    future
-                  </div>
-                </div>
-              </div>
-              <div class="value_flex">
-                <div class="value_item">
-                  <div class="value_item-one">
-                    <p>03</p>
-                    <span>Liberated</span>
-                  </div>
-                  <div class="value_item-two">
-                    While we respect many conventions adn protocols of the past,
-                    our drive to speak out and transform helps us to go further
-                    faster
-                  </div>
-                </div>
-                <div class="value_item">
-                  <div class="value_item-one">
-                    <p>04</p>
-                    <span>Generous</span>
-                  </div>
-                  <div class="value_item-two">
-                    Above all these, our commitment to ICC’s purpose is evident
-                    in the way we enable and care about the people whu help us
-                    to achieve it.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="mission">
-      <div class="container mw_1224">
-        <div class="mission_max">
-          <div class="mission_image">
-            <img src="img/mission1.png" alt="" />
-          </div>
-          <div class="mission_text">
-            <div class="mission_text-one">Our mission</div>
-            <div class="mission_text-two">
-              <p>We make business work for everyone, every day, everywhere.</p>
-              <p>
-                Everything we do at ICC aims to promote international trade and
-                investment as vehicles for inclusive growth and prosperity.
-              </p>
-              <p>
-                From resolving disputes when they arise in international
-                commerce to supporting global efforts to streamline customs and
-                border procedures, we support multilateralism as the best way to
-                address global challenges and reach global goals.
-              </p>
-              <p>
-                Having witnessed the power of international commerce to lift
-                millions of people out of poverty, today we have our sights set
-                on the future of globalisation, working to promote inclusive and
-                sustainable growth to the benefit of all.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="mission_text-end">
-          <p>
-            We work to promote international trade, responsible business conduct
-            and a global approach to regulation by combining our global
-            influence with our unique expertise in advocacy, standard-setting
-            activities and global services.
-          </p>
-          <p>
-            In the activities we carry out every day—in our work to support the
-            resolution of commercial disputes, through policy advocacy, in the
-            development of rules and guidelines, in our training courses, and in
-            the delivery of other practical tools and services, we help you
-            adapt to the challenges of trading in today’s fast-paced global
-            economy.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="rules">
-      <div class="container mw_1224">
-        <div class="rules_max">
-          <div class="rules_box">
-            <div class="rules_text">
-              <div class="rules_text-one">What we do</div>
-              <div class="rules_text-two">
-                ICC makes it easier for businesses to trade locally and
-                internationally. And we do this by delivering business insights
-                and intelligence, setting rules and standards for cross-border
-                commerce and resolving and avoiding commercial disputes. ICC
-                transcends borders to facilitate access to markets, for
-                businesses of all sizes.
-              </div>
-            </div>
-            <div class="rules_flex">
-              <div class="rules_item">
-                <div class="rules_border">
-                  <svg
-                    width="32"
-                    height="24"
-                    viewBox="0 0 32 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M14 24C14 24 12 24 12 22C12 20 14 14 22 14C30 14 32 20 32 22C32 24 30 24 30 24H14ZM22 12C23.5913 12 25.1174 11.3679 26.2426 10.2426C27.3679 9.11742 28 7.5913 28 6C28 4.4087 27.3679 2.88258 26.2426 1.75736C25.1174 0.632141 23.5913 0 22 0C20.4087 0 18.8826 0.632141 17.7574 1.75736C16.6321 2.88258 16 4.4087 16 6C16 7.5913 16.6321 9.11742 17.7574 10.2426C18.8826 11.3679 20.4087 12 22 12ZM10.432 24C10.1356 23.3756 9.98779 22.6911 10 22C10 19.29 11.36 16.5 13.872 14.56C12.6184 14.1729 11.312 13.9839 10 14C2 14 0 20 0 22C0 24 2 24 2 24H10.432ZM9 12C10.3261 12 11.5979 11.4732 12.5355 10.5355C13.4732 9.59785 14 8.32608 14 7C14 5.67392 13.4732 4.40215 12.5355 3.46447C11.5979 2.52678 10.3261 2 9 2C7.67392 2 6.40215 2.52678 5.46447 3.46447C4.52678 4.40215 4 5.67392 4 7C4 8.32608 4.52678 9.59785 5.46447 10.5355C6.40215 11.4732 7.67392 12 9 12Z"
-                      fill="black"
-                    />
-                  </svg>
-                </div>
-                <div class="rules_item-text">
-                  International engagement and advocacy
-                </div>
-              </div>
-              <div class="rules_item">
-                <div class="rules_border">
-                  <svg
-                    width="28"
-                    height="28"
-                    viewBox="0 0 28 28"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M14.0003 23.3337C14.3269 23.3337 14.6421 23.4536 14.8862 23.6706C15.1302 23.8876 15.2861 24.1867 15.3243 24.511L15.3337 24.667V26.0003C15.3333 26.3402 15.2032 26.667 14.9699 26.9142C14.7366 27.1613 14.4177 27.31 14.0785 27.3299C13.7392 27.3498 13.4052 27.2394 13.1445 27.0213C12.8839 26.8032 12.7165 26.4938 12.6763 26.1563L12.667 26.0003V24.667C12.667 24.3134 12.8075 23.9742 13.0575 23.7242C13.3076 23.4741 13.6467 23.3337 14.0003 23.3337ZM7.40033 20.6003C7.65029 20.8504 7.79071 21.1894 7.79071 21.543C7.79071 21.8965 7.65029 22.2356 7.40033 22.4857L6.45766 23.4283C6.33466 23.5557 6.18754 23.6572 6.02487 23.7271C5.86219 23.797 5.68723 23.8338 5.51019 23.8353C5.33315 23.8369 5.15758 23.8031 4.99372 23.7361C4.82986 23.669 4.68099 23.57 4.5558 23.4449C4.43061 23.3197 4.3316 23.1708 4.26456 23.0069C4.19752 22.8431 4.16379 22.6675 4.16533 22.4905C4.16686 22.3134 4.20365 22.1385 4.27352 21.9758C4.3434 21.8131 4.44498 21.666 4.57233 21.543L5.51499 20.6003C5.76503 20.3504 6.10411 20.2099 6.45766 20.2099C6.81121 20.2099 7.15029 20.3504 7.40033 20.6003ZM22.4857 20.6003L23.4283 21.543C23.6712 21.7945 23.8056 22.1313 23.8026 22.4809C23.7995 22.8305 23.6593 23.1649 23.4121 23.4121C23.1649 23.6593 22.8305 23.7995 22.4809 23.8026C22.1313 23.8056 21.7945 23.6712 21.543 23.4283L20.6003 22.4857C20.3575 22.2342 20.2231 21.8974 20.2261 21.5478C20.2291 21.1982 20.3694 20.8638 20.6166 20.6166C20.8638 20.3694 21.1982 20.2291 21.5478 20.2261C21.8974 20.2231 22.2342 20.3575 22.4857 20.6003ZM14.823 0.666992C15.4731 0.666851 16.1008 0.904178 16.5882 1.33436C17.0756 1.76453 17.389 2.35793 17.4697 3.00299L17.9763 7.05633C19.5066 7.93276 20.7043 9.29024 21.3834 10.9177C22.0625 12.5451 22.1848 14.3514 21.7313 16.0555C21.2778 17.7597 20.274 19.2662 18.8759 20.3409C17.4778 21.4157 15.7638 21.9983 14.0003 21.9983C12.2369 21.9983 10.5228 21.4157 9.12474 20.3409C7.72664 19.2662 6.72281 17.7597 6.26935 16.0555C5.81588 14.3514 5.93819 12.5451 6.61726 10.9177C7.29633 9.29024 8.4941 7.93276 10.0243 7.05633L10.531 3.00299C10.6116 2.35793 10.9251 1.76453 11.4125 1.33436C11.8998 0.904178 12.5276 0.666851 13.1777 0.666992H14.823ZM3.33366 12.667C3.68728 12.667 4.02642 12.8075 4.27647 13.0575C4.52652 13.3076 4.66699 13.6467 4.66699 14.0003C4.66699 14.3539 4.52652 14.6931 4.27647 14.9431C4.02642 15.1932 3.68728 15.3337 3.33366 15.3337H2.00033C1.6467 15.3337 1.30756 15.1932 1.05752 14.9431C0.807468 14.6931 0.666992 14.3539 0.666992 14.0003C0.666992 13.6467 0.807468 13.3076 1.05752 13.0575C1.30756 12.8075 1.6467 12.667 2.00033 12.667H3.33366ZM26.0003 12.667C26.3539 12.667 26.6931 12.8075 26.9431 13.0575C27.1932 13.3076 27.3337 13.6467 27.3337 14.0003C27.3337 14.3539 27.1932 14.6931 26.9431 14.9431C26.6931 15.1932 26.3539 15.3337 26.0003 15.3337H24.667C24.3134 15.3337 23.9742 15.1932 23.7242 14.9431C23.4741 14.6931 23.3337 14.3539 23.3337 14.0003C23.3337 13.6467 23.4741 13.3076 23.7242 13.0575C23.9742 12.8075 24.3134 12.667 24.667 12.667H26.0003ZM23.4283 4.57366C23.6783 4.8237 23.8187 5.16277 23.8187 5.51633C23.8187 5.86988 23.6783 6.20896 23.4283 6.45899L22.4857 7.40166C22.3627 7.52901 22.2155 7.63058 22.0529 7.70046C21.8902 7.77034 21.7152 7.80712 21.5382 7.80866C21.3612 7.8102 21.1856 7.77646 21.0217 7.70942C20.8579 7.64238 20.709 7.54338 20.5838 7.41819C20.4586 7.293 20.3596 7.14413 20.2926 6.98026C20.2255 6.8164 20.1918 6.64083 20.1933 6.46379C20.1949 6.28675 20.2316 6.11179 20.3015 5.94912C20.3714 5.78645 20.473 5.63932 20.6003 5.51633L21.543 4.57366C21.793 4.3237 22.1321 4.18328 22.4857 4.18328C22.8392 4.18328 23.1783 4.3237 23.4283 4.57366ZM6.45766 4.57366L7.40033 5.51633C7.6372 5.76893 7.76651 6.10378 7.76088 6.45002C7.75526 6.79626 7.61515 7.12674 7.3702 7.37151C7.12525 7.61629 6.79468 7.75617 6.44843 7.76154C6.10218 7.76692 5.76743 7.63738 5.51499 7.40033L4.57233 6.45766C4.33545 6.20506 4.20615 5.87021 4.21177 5.52397C4.21739 5.17772 4.3575 4.84725 4.60245 4.60247C4.8474 4.35769 5.17797 4.21782 5.52422 4.21244C5.87047 4.20706 6.20523 4.33661 6.45766 4.57366ZM14.823 3.33366H13.1777L12.8443 6.00033H15.1563L14.823 3.33366Z"
-                      fill="black"
-                    />
-                  </svg>
-                </div>
-                <div class="rules_item-text">
-                  On-the-ground solutions and implementation
-                </div>
-              </div>
-              <div class="rules_item">
-                <div class="rules_border">
-                  <svg
-                    width="26"
-                    height="24"
-                    viewBox="0 0 26 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M0.666992 24V5.33333C0.666992 2.81867 0.666992 1.56267 1.44833 0.781333C2.22966 -7.94729e-08 3.48566 0 6.00033 0H19.3337C20.443 0 21.3043 -6.70552e-08 22.0057 0.0359999C20.5378 0.198786 19.1815 0.897239 18.1965 1.99765C17.2114 3.09806 16.6669 4.52311 16.667 6V10.6667L16.535 23.956L12.667 22.6667L8.66699 24L4.66699 22.6667L0.666992 24ZM26.0003 10.6667H19.3337V6C19.3337 5.11595 19.6848 4.2681 20.31 3.64298C20.9351 3.01786 21.7829 2.66667 22.667 2.66667C23.551 2.66667 24.3989 3.01786 25.024 3.64298C25.6491 4.2681 26.0003 5.11595 26.0003 6V10.6667ZM3.33366 5.33333C3.33366 4.97971 3.47413 4.64057 3.72418 4.39052C3.97423 4.14048 4.31337 4 4.66699 4H12.667C13.0206 4 13.3598 4.14048 13.6098 4.39052C13.8598 4.64057 14.0003 4.97971 14.0003 5.33333C14.0003 5.68696 13.8598 6.02609 13.6098 6.27614C13.3598 6.52619 13.0206 6.66667 12.667 6.66667H4.66699C4.31337 6.66667 3.97423 6.52619 3.72418 6.27614C3.47413 6.02609 3.33366 5.68696 3.33366 5.33333ZM3.33366 10.6667C3.33366 10.313 3.47413 9.97391 3.72418 9.72386C3.97423 9.47381 4.31337 9.33333 4.66699 9.33333H7.33366C7.68728 9.33333 8.02642 9.47381 8.27647 9.72386C8.52652 9.97391 8.66699 10.313 8.66699 10.6667C8.66699 11.0203 8.52652 11.3594 8.27647 11.6095C8.02642 11.8595 7.68728 12 7.33366 12H4.66699C4.31337 12 3.97423 11.8595 3.72418 11.6095C3.47413 11.3594 3.33366 11.0203 3.33366 10.6667ZM3.33366 16C3.33366 15.6464 3.47413 15.3072 3.72418 15.0572C3.97423 14.8071 4.31337 14.6667 4.66699 14.6667H10.0003C10.3539 14.6667 10.6931 14.8071 10.9431 15.0572C11.1932 15.3072 11.3337 15.6464 11.3337 16C11.3337 16.3536 11.1932 16.6928 10.9431 16.9428C10.6931 17.1929 10.3539 17.3333 10.0003 17.3333H4.66699C4.31337 17.3333 3.97423 17.1929 3.72418 16.9428C3.47413 16.6928 3.33366 16.3536 3.33366 16Z"
-                      fill="black"
-                    />
-                  </svg>
-                </div>
-                <div class="rules_item-text">
-                  Rules & standards for the 21st century
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="rules_image">
-            <img src="./img/rules1.png" alt="" />
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="whyy">
-      <div class="container mw_1304">
-        <div class="whyy_bottom">
-          <div class="whyy_circle-1"></div>
-          <div class="whyy_circle-3"></div>
-          <div class="whyy_flex">
-            <div class="whyy_text-one">
-              <div class="whyy_circle-2"></div>
-              Why We Do It
-            </div>
-            <div class="whyy_text-two">
-              The private sector has the power to change the world for the
-              better. Global trade and investment drives competitiveness,
-              promotes fairness, creates commercial opportunities, reduces
-              global poverty, and benefits communities, workers and consumers.
-              The prosperity and opportunity this creates around the world helps
-              maintain global stability and security, or in other words, peace.
-              We are the voice of the real economy. We have the legacy,
-              expertise, knowledge and global network to get things done.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="how">
-      <div class="container mw_1224">
-        <div class="how_top">
-          <div class="how_top-one">How we do it</div>
-          <div class="how_top-two">
-            ICC has unrivalled expertise, knowledge and a network, unlike any
-            other institution in the world. We are the voice and driver of
-            businesses everywhere. From start-ups to multinationals. We speak up
-            for the real economy with a bold and independent voice. ICC is the
-            gold standard for world business, and we have been so for over 100
-            years. Everything ICC does, drives a more peaceful, more sustainable
-            and more prosperous future for all.
-          </div>
-        </div>
-        <div class="how_center">
-          <div class="how_min">
-            <div class="how_box">
-              <div class="how_item2">
-                <div class="how_bg" style="background: #afcb3a"></div>
-                <div class="how_item2-text">
-                  <span>Make trade work for people and our planet</span>
-                </div>
-              </div>
-              <div class="how_item2">
-                <div class="how_bg" style="background: #009984"></div>
-                <div class="how_item2-text">
-                  <span>Make action on climate change everyone’s business</span>
-                </div>
-              </div>
-              <div class="how_item2">
-                <div class="how_bg" style="background: #96c2e9"></div>
-                <div class="how_item2-text">
-                  <span>Make technology work for all </span>
-                </div>
-              </div>
-            </div>
-            <div class="how_box2">
-              <div class="how_item2">
-                <div class="how_bg" style="background: #96c2e9"></div>
-                <div class="how_item2-text">
-                  <span>Make technology work for all </span>
-                </div>
-              </div>
-            </div>
-            <div class="how_box1">
-              <div class="how_item2">
-                <div class="how_bg" style="background: #f7a512"></div>
-                <div class="how_item2-text">
-                  <span>Stop the global rise in inquelaity</span>
-                </div>
-              </div>
-              <div class="how_item2">
-                <div class="how_bg" style="background: #00b5e5"></div>
-                <div class="how_item2-text">
-                  <span>
-                    Lead for the long term
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="team">
-      <div class="container mw_1224">
-        <div class="team_top">OUR TEAM</div>
-        <div class="team_box">
-          <div
-            class="swiper mySwiper swiper-initialized swiper-horizontal swiper-backface-hidden"
-          >
-            <div
-              class="swiper-wrapper"
-              id="swiper-wrapper-12761a9c7384b978"
-              aria-live="polite"
-              style="
-                transition-duration: 0ms;
-                transform: translate3d(0px, 0px, 0px);
-                transition-delay: 0ms;
-              "
-            >
-              <div
-                class="swiper-slide swiper-slide-active"
-                role="group"
-                aria-label="1 / 8"
-                style="width: 305px; margin-right: 20px"
-              >
-                <div class="team_product">
-                  <div class="team_img">
-                    <img src="./img/team1.png" alt="" />
-                  </div>
-                  <div class="box_text">
-                    <div class="text-one">CEO</div>
-                    <div class="text-two">
-                      Sheikh Khalifa bin Jassim Al Thani
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="./js/jquery.js"></script>
+        <script src="./js/swiper-bundle.min.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
+        <script src="js/slick.js"></script>
+        <script src="./js/mani.js"></script>
+        <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="css/slick.css">
+        <link rel="stylesheet" href="css/slick-theme.css">
+        <link rel="stylesheet" href="./css/bootstrap.min.css" />
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+    <body>
+        <header>
+            <div class="header">
+                <div class="header_max">
+                    <a class="header_logo" href="">
+                        <img src="./img/logo.svg" alt="" />
+                    </a>
+                    <div class="header_box">
+                        <div class="header_search">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.99219 17.9922C7.74219 17.9922 6.57031 17.7578 5.47656 17.2891C4.38281 16.8203 3.42969 16.1797 2.61719 15.3672C1.80469 14.5547 1.16406 13.6016 0.695312 12.5078C0.226562 11.4141 -0.0078125 10.2422 -0.0078125 8.99219C-0.0078125 7.74219 0.226562 6.57031 0.695312 5.47656C1.16406 4.38281 1.80469 3.42969 2.61719 2.61719C3.42969 1.80469 4.38281 1.16406 5.47656 0.695312C6.57031 0.226562 7.74219 -0.0078125 8.99219 -0.0078125C10.2422 -0.0078125 11.4141 0.226562 12.5078 0.695312C13.6016 1.16406 14.5547 1.80469 15.3672 2.61719C16.1797 3.42969 16.8203 4.38281 17.2891 5.47656C17.7578 6.57031 17.9922 7.74219 17.9922 8.99219C17.9922 10.2422 17.7578 11.4141 17.2891 12.5078C16.8203 13.6016 16.1797 14.5547 15.3672 15.3672C14.5547 16.1797 13.6016 16.8203 12.5078 17.2891C11.4141 17.7578 10.2422 17.9922 8.99219 17.9922ZM8.99219 2.00781C8.02344 2.00781 7.10938 2.1875 6.25 2.54688C5.40625 2.90625 4.66797 3.40234 4.03516 4.03516C3.40234 4.66797 2.90625 5.40625 2.54688 6.25C2.1875 7.10938 2.00781 8.02344 2.00781 8.99219C2.00781 9.97656 2.1875 10.8906 2.54688 11.7344C2.90625 12.5938 3.40234 13.3359 4.03516 13.9609C4.66797 14.5859 5.40625 15.0859 6.25 15.4609C7.10938 15.8203 8.02344 16 8.99219 16C9.97656 16 10.8906 15.8203 11.7344 15.4609C12.5938 15.0859 13.3359 14.5859 13.9609 13.9609C14.5859 13.3359 15.0859 12.5938 15.4609 11.7344C15.8203 10.8906 16 9.97656 16 8.99219C16 8.02344 15.8203 7.10938 15.4609 6.25C15.0859 5.40625 14.5859 4.66797 13.9609 4.03516C13.3359 3.40234 12.5938 2.90625 11.7344 2.54688C10.8906 2.1875 9.97656 2.00781 8.99219 2.00781ZM19 20.0078C18.8438 20.0078 18.7148 19.9805 18.6133 19.9258C18.5117 19.8711 18.4062 19.7969 18.2969 19.7031L14.0078 15.3906C13.8047 15.2031 13.7031 14.9727 13.7031 14.6992C13.7031 14.4258 13.8047 14.1953 14.0078 14.0078C14.1953 13.8047 14.4258 13.7031 14.6992 13.7031C14.9727 13.7031 15.2031 13.8047 15.3906 14.0078L19.7031 18.2969C19.9062 18.5 20.0078 18.7344 20.0078 19C20.0078 19.2656 19.9062 19.5 19.7031 19.7031C19.5938 19.7969 19.4883 19.8711 19.3867 19.9258C19.2852 19.9805 19.1562 20.0078 19 20.0078Z" fill="black" />
+                            </svg>
+                            <span>Search</span>
+                        </div>
+                        <div class="header_menu">
+                            <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 8.00781H1C0.703125 8.00781 0.460938 7.91406 0.273438 7.72656C0.0859375 7.53906 -0.0078125 7.29688 -0.0078125 7C-0.0078125 6.70312 0.0859375 6.46094 0.273438 6.27344C0.460938 6.08594 0.703125 5.99219 1 5.99219H19C19.2969 5.99219 19.5391 6.08594 19.7266 6.27344C19.9141 6.46094 20.0078 6.70312 20.0078 7C20.0078 7.29688 19.9141 7.53906 19.7266 7.72656C19.5391 7.91406 19.2969 8.00781 19 8.00781ZM19 2.00781H1C0.703125 2.00781 0.460938 1.91406 0.273438 1.72656C0.0859375 1.53906 -0.0078125 1.29688 -0.0078125 1C-0.0078125 0.703125 0.0859375 0.460938 0.273438 0.273438C0.460938 0.0859375 0.703125 -0.0078125 1 -0.0078125H19C19.2969 -0.0078125 19.5391 0.0859375 19.7266 0.273438C19.9141 0.460938 20.0078 0.703125 20.0078 1C20.0078 1.29688 19.9141 1.53906 19.7266 1.72656C19.5391 1.91406 19.2969 2.00781 19 2.00781ZM19 14.0078H1C0.703125 14.0078 0.460938 13.9141 0.273438 13.7266C0.0859375 13.5391 -0.0078125 13.2969 -0.0078125 13C-0.0078125 12.7031 0.0859375 12.4609 0.273438 12.2734C0.460938 12.0859 0.703125 11.9922 1 11.9922H19C19.2969 11.9922 19.5391 12.0859 19.7266 12.2734C19.9141 12.4609 20.0078 12.7031 20.0078 13C20.0078 13.2969 19.9141 13.5391 19.7266 13.7266C19.5391 13.9141 19.2969 14.0078 19 14.0078Z" fill="black" />
+                            </svg>
+                            <span>Menu</span>
+                        </div>
+                        <div class="header_button">
+                            <span> Become a Member</span>
+                            <span class="arrow">
+                                <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_28_192)">
+                                        <path d="M1.71855 10.1333C1.71855 9.85948 1.82719 9.59692 2.02059 9.40334C2.21399 9.20975 2.47629 9.101 2.7498 9.101L16.7645 9.101L15.4239 7.76938C15.2297 7.57501 15.1206 7.31137 15.1206 7.03648C15.1206 6.76159 15.2297 6.49796 15.4239 6.30358C15.618 6.1092 15.8814 6 16.156 6C16.4307 6 16.694 6.1092 16.8882 6.30358L19.982 9.40035C20.1251 9.54551 20.222 9.72985 20.2606 9.93009C20.2991 10.1303 20.2775 10.3375 20.1985 10.5255C20.1212 10.714 19.9898 10.8754 19.821 10.9893C19.6521 11.1032 19.4534 11.1645 19.2498 11.1655L2.7498 11.1655C2.47629 11.1655 2.21399 11.0568 2.02059 10.8632C1.82719 10.6696 1.71855 10.407 1.71855 10.1333Z" fill="#007DFF" />
+                                        <path d="M15.1248 13.2299C15.124 13.0941 15.15 12.9594 15.2014 12.8336C15.2527 12.7079 15.3283 12.5935 15.4239 12.497L18.5176 9.40026C18.7118 9.20588 18.9752 9.09668 19.2498 9.09668C19.3858 9.09668 19.5204 9.12349 19.6461 9.17558C19.7717 9.22766 19.8858 9.30401 19.982 9.40026C20.0781 9.4965 20.1544 9.61076 20.2065 9.73652C20.2585 9.86227 20.2853 9.99705 20.2853 10.1332C20.2853 10.4081 20.1762 10.6717 19.982 10.8661L16.8882 13.9628C16.7924 14.0596 16.6783 14.1364 16.5527 14.1888C16.427 14.2412 16.2922 14.2682 16.1561 14.2682C16.0199 14.2682 15.8851 14.2412 15.7595 14.1888C15.6338 14.1364 15.5197 14.0596 15.4239 13.9628C15.3283 13.8664 15.2527 13.752 15.2014 13.6262C15.15 13.5005 15.124 13.3658 15.1248 13.2299Z" fill="#007DFF" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_28_192">
+                                            <rect width="20" height="22" fill="white" transform="translate(22) rotate(90)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </span>
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </div>
-              <div
-                class="swiper-slide swiper-slide-next"
-                role="group"
-                aria-label="2 / 8"
-                style="width: 305px; margin-right: 20px"
-              >
-                <div class="team_product">
-                  <div class="team_img">
-                    <img src="./img/team2.png" alt="" />
-                  </div>
-                  <div class="box_text">
-                    <div class="text-one">
-                      Secretary General &amp; WCF General Council Member
-                    </div>
-                    <div class="text-two">HE Sheikha Tamader</div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="swiper-slide"
-                role="group"
-                aria-label="3 / 8"
-                style="width: 305px; margin-right: 20px"
-              >
-                <div class="team_product">
-                  <div class="team_img">
-                    <img src="./img/team3.png" alt="" />
-                  </div>
-                  <div class="box_text">
-                    <div class="text-one">
-                      Head of International Affairs and ICC Events
-                    </div>
-                    <div class="text-two">Nora Zeidan</div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="swiper-slide"
-                role="group"
-                aria-label="4 / 8"
-                style="width: 305px; margin-right: 20px"
-              >
-                <div class="team_product">
-                  <div class="team_img">
-                    <img src="./img/team4.png" alt="" />
-                  </div>
-                  <div class="box_text">
-                    <div class="text-one">Policies and Events Coordinator</div>
-                    <div class="text-two">Sherwet Mohamed</div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="swiper-slide"
-                role="group"
-                aria-label="5 / 8"
-                style="width: 305px; margin-right: 20px"
-              >
-                <div class="team_product">
-                  <div class="team_img">
-                    <img src="./img/team1.png" alt="" />
-                  </div>
-                  <div class="box_text">
-                    <div class="text-one">CEO</div>
-                    <div class="text-two">
-                      Sheikh Khalifa bin Jassim Al Thani
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="swiper-slide"
-                role="group"
-                aria-label="6 / 8"
-                style="width: 305px; margin-right: 20px"
-              >
-                <div class="team_product">
-                  <div class="team_img">
-                    <img src="./img/team1.png" alt="" />
-                  </div>
-                  <div class="box_text">
-                    <div class="text-one">
-                      Secretary General &amp; WCF General Council Member
-                    </div>
-                    <div class="text-two">HE Sheikha Tamader</div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="swiper-slide"
-                role="group"
-                aria-label="7 / 8"
-                style="width: 305px; margin-right: 20px"
-              >
-                <div class="team_product">
-                  <div class="team_img">
-                    <img src="./img/team1.png" alt="" />
-                  </div>
-                  <div class="box_text">
-                    <div class="text-one">
-                      Head of International Affairs and ICC Events
-                    </div>
-                    <div class="text-two">Nora Zeidan</div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="swiper-slide"
-                role="group"
-                aria-label="8 / 8"
-                style="width: 305px; margin-right: 20px"
-              >
-                <div class="team_product">
-                  <div class="team_img">
-                    <img src="./img/team1.png" alt="" />
-                  </div>
-                  <div class="box_text">
-                    <div class="text-one">Policies and Events Coordinator</div>
-                    <div class="text-two">Sherwet Mohamed</div>
-                  </div>
-                </div>
-              </div>
             </div>
-            <span
-              class="swiper-notification"
-              aria-live="assertive"
-              aria-atomic="true"
-            ></span>
-          </div>
-          <script>
-            var swiper = new Swiper(".team .mySwiper", {
-              //freeMode: true,
-              pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-              },
-              breakpoints: {
-                // Nhỏ nhất bị ảnh hưởng là 0 - mobile đứng
-                0: {
-                  slidesPerView: 1,
-                  spaceBetween: 20,
-                },
-                // Nhỏ nhất bị ảnh hưởng là 451px - mobile ngang
-                451: {
-                  slidesPerView: 2,
-                  spaceBetween: 20,
-                },
-                // Nhỏ nhất bị ảnh hưởng là 768px - ipad đứng
-                768: {
-                  slidesPerView: 3,
-                  spaceBetween: 20,
-                },
-                // Nhỏ nhất bị ảnh hưởng là 993px - ipad ngang
-                993: {
-                  slidesPerView: 4,
-                  spaceBetween: 30,
-                },
-              },
+        </header>
+        <div class="menu">
+            <div class="menu_max">
+                <div class="menu_box">
+                    <div class="flex">
+                        <div class="menu_logo">
+                            <img src="./img/logo.svg" alt="" />
+                        </div>
+                        <div class="close">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.7017 10.8615C11.7568 10.9167 11.8006 10.9822 11.8304 11.0542C11.8603 11.1263 11.8757 11.2036 11.8757 11.2816C11.8757 11.3596 11.8603 11.4368 11.8304 11.5089C11.8006 11.581 11.7568 11.6465 11.7017 11.7017C11.6465 11.7568 11.581 11.8006 11.5089 11.8304C11.4368 11.8603 11.3596 11.8757 11.2816 11.8757C11.2036 11.8757 11.1263 11.8603 11.0542 11.8304C10.9822 11.8006 10.9167 11.7568 10.8615 11.7017L5.93783 6.77724L1.01416 11.7017C0.902747 11.8131 0.75164 11.8757 0.59408 11.8757C0.43652 11.8757 0.285414 11.8131 0.174002 11.7017C0.0625904 11.5902 3.10588e-09 11.4391 0 11.2816C-3.10588e-09 11.124 0.0625904 10.9729 0.174002 10.8615L5.09842 5.93783L0.174002 1.01416C0.0625904 0.902747 -1.17391e-09 0.75164 0 0.59408C1.17391e-09 0.43652 0.0625904 0.285414 0.174002 0.174002C0.285414 0.0625904 0.43652 1.17391e-09 0.59408 0C0.75164 -1.17391e-09 0.902747 0.0625904 1.01416 0.174002L5.93783 5.09842L10.8615 0.174002C10.9729 0.0625904 11.124 -3.10588e-09 11.2816 0C11.4391 3.10588e-09 11.5902 0.0625904 11.7017 0.174002C11.8131 0.285414 11.8757 0.43652 11.8757 0.59408C11.8757 0.75164 11.8131 0.902747 11.7017 1.01416L6.77724 5.93783L11.7017 10.8615Z" fill="black" />
+                            </svg>
+                        </div>
+                    </div>
+                    <ul class="menu_nav">
+                        <li class="menu_item">
+                            <div class="flex_gap">
+                                <a href="">About Icc</a>
+                                <span class="arrow"></span>
+                            </div>
+                        </li>
+                        <li class="menu_item">
+                            <div class="flex_gap">
+                                <a href="">Area of work</a>
+                                <span class="arrow"></span>
+                            </div>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="">Commissions</a>
+                                </li>
+                                <li>
+                                    <a href="">Products & Services</a>
+                                </li>
+                                <li>
+                                    <a href="">Discover SME360X</a>
+                                </li>
+                                <li>
+                                    <a href="">ICC Network</a>
+                                </li>
+                                <li>
+                                    <a href="">ICC Partnership</a>
+                                </li>
+                                <li>
+                                    <a href="">Special Projects</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu_item">
+                            <div class="flex_gap">
+                                <a href="">Icc Global</a>
+                                <span class="arrow"></span>
+                            </div>
+                        </li>
+                        <li class="menu_item">
+                            <div class="flex_gap">
+                                <a href="">News & media</a>
+                                <span class="arrow"></span>
+                            </div>
+                        </li>
+                        <li class="menu_item">
+                            <div class="flex_gap">
+                                <a href="">events</a>
+                                <span class="arrow"></span>
+                            </div>
+                        </li>
+                        <li class="menu_item">
+                            <div class="flex_gap">
+                                <a href="">events</a>
+                                <span class="arrow"></span>
+                            </div>
+                        </li>
+                        <li class="menu_item">
+                            <div class="flex_gap">
+                                <a href="">gallery</a>
+                            </div>
+                        </li>
+                        <li class="menu_item">
+                            <div class="flex_gap">
+                                <a href="">Newsroom</a>
+                            </div>
+                        </li>
+                        <li class="menu_item">
+                            <div class="flex_gap">
+                                <a href="">Contact Us</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="flex_bottom pt_40">
+                        <a href="">
+                            <img src="./img/ig.svg" alt="" />
+                        </a>
+                        <a href="">
+                            <img src="./img/Facebook.svg" alt="" />
+                        </a>
+                        <a href="">
+                            <img src="./img/Twitter.svg" alt="" />
+                        </a>
+                    </div>
+                    <div class="menu_position">
+                        <img src="./img/map.png" alt="" />
+                    </div>
+                </div>
+                <div class="menu_img">
+                    <img src="./img/Menu.png" alt="" />
+                </div>
+            </div>
+        </div>
+        <div class="banner_inner" style="background-image: url(./img/banner_inner.png)">
+            <div class="container mw_1224">
+                <div class="banner_inner-box">
+                    <div class="banner_inner-max">
+                        <div class="banner_inner-max-one">About Us</div>
+                        <div class="banner_inner-max-two"> To receive updates regarding ICC news, issues and related products and services direct to your inbox, please provide the information requested in the form below. Be sure to indicate the topic and click the “Subscribe” button to activate your subscription. You can set your preferences at any time. </div>
+                    </div>
+                    <div class="banner_inner-flex">
+                        <a class="text-one" href="">Home</a>
+                        <span>
+                            <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.862061 1.13798L5.72406 5.99998L0.862061 10.862L1.80473 11.8046L7.60939 5.99998L1.80473 0.195312L0.862061 1.13798Z" fill="white" />
+                            </svg>
+                        </span>
+                        <div class="text-two">About Us</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="purpose">
+            <div class="container mw_1224">
+                <div class="purpose_box">
+                    <div class="purpose_text">
+                        <div class="purpose_text-one">Our Purpose</div>
+                        <div class="purpose_text-two"> We make business work for everyone, every day, everywhere. </div>
+                        <div class="purpose_text-three">
+                            <p> Everything we do at ICC aims to promote international trade and investment as vehicles for inclusive growth and prosperity. </p>
+                            <p> From resolving disputes when they arise in international commerce to supporting global efforts to streamline customs and border procedures, we support multilateralism as the best way to address global challenges and reach global goals. </p>
+                            <p> Having witnessed the power of international commerce to lift millions of people out of poverty, today we have our sights set on the future of globalisation, working to promote inclusive and sustainable growth to the benefit of all. </p>
+                        </div>
+                    </div>
+                    <div class="purpose_img">
+                        <img src="./img/purpose.svg" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="value">
+            <div class="bg_img">
+                <img src="./img/bg_max.png" alt="" />
+            </div>
+            <div class="container mw_1224">
+                <div class="value_max">
+                    <div class="value_box">
+                        <div class="images">
+                            <img src="./img/avata.png" alt="" />
+                        </div>
+                        <div class="text-one"> “Over the past few decades, global trade has seen remarkable growth and has become more dynamic and interconnected. The increased trade has led to the pressing need for greater cooperation to streamline the movement of goods and services across borders. This phenomenon, closely interlinked with globalization, has created an intricate network of economic interactions, including players from across the world. Qatar’s private sector, who has a significant role to play as a key pillar of the global economy, has a great opportunity to share their views with policymakers and make recommendations that contribute to driving growth and benefiting international trade.” </div>
+                        <div class="text-two">H.E. Sheikh Khalifa bin Jassim Al Thani</div>
+                        <div class="text-three">Chairman, ICC Qatar</div>
+                    </div>
+                    <div class="value_min">
+                        <div class="value_text">
+                            <div class="value_text-one">Our value</div>
+                            <div class="value_text-two"> The world is rapidly changing and we’re innovating with it but our commitment to living and working according to our values is still the same. That’s how we make business work for everyone, every day, everywhere. </div>
+                        </div>
+                        <div class="value_big">
+                            <div class="value_flex">
+                                <div class="value_item">
+                                    <div class="value_item-one">
+                                        <p>01</p>
+                                        <span>Connected</span>
+                                    </div>
+                                    <div class="value_item-two"> We leverage networks, technology and effective communication to unify business for a better world </div>
+                                </div>
+                                <div class="value_item">
+                                    <div class="value_item-one">
+                                        <p>02</p>
+                                        <span>Pioneering</span>
+                                    </div>
+                                    <div class="value_item-two"> It’s in our DNA to develop the standards, partnerships and initiatives which chart the course for a more prosperous future </div>
+                                </div>
+                                <div class="value_item">
+                                    <div class="value_item-one">
+                                        <p>03</p>
+                                        <span>Liberated</span>
+                                    </div>
+                                    <div class="value_item-two"> While we respect many conventions adn protocols of the past, our drive to speak out and transform helps us to go further faster </div>
+                                </div>
+                                <div class="value_item">
+                                    <div class="value_item-one">
+                                        <p>04</p>
+                                        <span>Generous</span>
+                                    </div>
+                                    <div class="value_item-two"> Above all these, our commitment to ICC’s purpose is evident in the way we enable and care about the people whu help us to achieve it. </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mission">
+            <div class="container mw_1224">
+                <div class="mission_max">
+                    <div class="mission_image">
+                        <img src="img/mission1.png" alt="" />
+                    </div>
+                    <div class="mission_text">
+                        <div class="mission_text-one">Our mission</div>
+                        <div class="mission_text-two">
+                            <p>We make business work for everyone, every day, everywhere.</p>
+                            <p> Everything we do at ICC aims to promote international trade and investment as vehicles for inclusive growth and prosperity. </p>
+                            <p> From resolving disputes when they arise in international commerce to supporting global efforts to streamline customs and border procedures, we support multilateralism as the best way to address global challenges and reach global goals. </p>
+                            <p> Having witnessed the power of international commerce to lift millions of people out of poverty, today we have our sights set on the future of globalisation, working to promote inclusive and sustainable growth to the benefit of all. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mission_text-end">
+                    <p> We work to promote international trade, responsible business conduct and a global approach to regulation by combining our global influence with our unique expertise in advocacy, standard-setting activities and global services. </p>
+                    <p> In the activities we carry out every day—in our work to support the resolution of commercial disputes, through policy advocacy, in the development of rules and guidelines, in our training courses, and in the delivery of other practical tools and services, we help you adapt to the challenges of trading in today’s fast-paced global economy. </p>
+                </div>
+            </div>
+        </div>
+        <div class="rules">
+            <div class="container mw_1224">
+                <div class="rules_max">
+                    <div class="rules_box">
+                        <div class="rules_text">
+                            <div class="rules_text-one">What we do</div>
+                            <div class="rules_text-two"> ICC makes it easier for businesses to trade locally and internationally. And we do this by delivering business insights and intelligence, setting rules and standards for cross-border commerce and resolving and avoiding commercial disputes. ICC transcends borders to facilitate access to markets, for businesses of all sizes. </div>
+                        </div>
+                        <div class="rules_flex">
+                            <div class="rules_item">
+                                <div class="rules_border">
+                                    <svg width="32" height="24" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14 24C14 24 12 24 12 22C12 20 14 14 22 14C30 14 32 20 32 22C32 24 30 24 30 24H14ZM22 12C23.5913 12 25.1174 11.3679 26.2426 10.2426C27.3679 9.11742 28 7.5913 28 6C28 4.4087 27.3679 2.88258 26.2426 1.75736C25.1174 0.632141 23.5913 0 22 0C20.4087 0 18.8826 0.632141 17.7574 1.75736C16.6321 2.88258 16 4.4087 16 6C16 7.5913 16.6321 9.11742 17.7574 10.2426C18.8826 11.3679 20.4087 12 22 12ZM10.432 24C10.1356 23.3756 9.98779 22.6911 10 22C10 19.29 11.36 16.5 13.872 14.56C12.6184 14.1729 11.312 13.9839 10 14C2 14 0 20 0 22C0 24 2 24 2 24H10.432ZM9 12C10.3261 12 11.5979 11.4732 12.5355 10.5355C13.4732 9.59785 14 8.32608 14 7C14 5.67392 13.4732 4.40215 12.5355 3.46447C11.5979 2.52678 10.3261 2 9 2C7.67392 2 6.40215 2.52678 5.46447 3.46447C4.52678 4.40215 4 5.67392 4 7C4 8.32608 4.52678 9.59785 5.46447 10.5355C6.40215 11.4732 7.67392 12 9 12Z" fill="black" />
+                                    </svg>
+                                </div>
+                                <div class="rules_item-text"> International engagement and advocacy </div>
+                            </div>
+                            <div class="rules_item">
+                                <div class="rules_border">
+                                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M14.0003 23.3337C14.3269 23.3337 14.6421 23.4536 14.8862 23.6706C15.1302 23.8876 15.2861 24.1867 15.3243 24.511L15.3337 24.667V26.0003C15.3333 26.3402 15.2032 26.667 14.9699 26.9142C14.7366 27.1613 14.4177 27.31 14.0785 27.3299C13.7392 27.3498 13.4052 27.2394 13.1445 27.0213C12.8839 26.8032 12.7165 26.4938 12.6763 26.1563L12.667 26.0003V24.667C12.667 24.3134 12.8075 23.9742 13.0575 23.7242C13.3076 23.4741 13.6467 23.3337 14.0003 23.3337ZM7.40033 20.6003C7.65029 20.8504 7.79071 21.1894 7.79071 21.543C7.79071 21.8965 7.65029 22.2356 7.40033 22.4857L6.45766 23.4283C6.33466 23.5557 6.18754 23.6572 6.02487 23.7271C5.86219 23.797 5.68723 23.8338 5.51019 23.8353C5.33315 23.8369 5.15758 23.8031 4.99372 23.7361C4.82986 23.669 4.68099 23.57 4.5558 23.4449C4.43061 23.3197 4.3316 23.1708 4.26456 23.0069C4.19752 22.8431 4.16379 22.6675 4.16533 22.4905C4.16686 22.3134 4.20365 22.1385 4.27352 21.9758C4.3434 21.8131 4.44498 21.666 4.57233 21.543L5.51499 20.6003C5.76503 20.3504 6.10411 20.2099 6.45766 20.2099C6.81121 20.2099 7.15029 20.3504 7.40033 20.6003ZM22.4857 20.6003L23.4283 21.543C23.6712 21.7945 23.8056 22.1313 23.8026 22.4809C23.7995 22.8305 23.6593 23.1649 23.4121 23.4121C23.1649 23.6593 22.8305 23.7995 22.4809 23.8026C22.1313 23.8056 21.7945 23.6712 21.543 23.4283L20.6003 22.4857C20.3575 22.2342 20.2231 21.8974 20.2261 21.5478C20.2291 21.1982 20.3694 20.8638 20.6166 20.6166C20.8638 20.3694 21.1982 20.2291 21.5478 20.2261C21.8974 20.2231 22.2342 20.3575 22.4857 20.6003ZM14.823 0.666992C15.4731 0.666851 16.1008 0.904178 16.5882 1.33436C17.0756 1.76453 17.389 2.35793 17.4697 3.00299L17.9763 7.05633C19.5066 7.93276 20.7043 9.29024 21.3834 10.9177C22.0625 12.5451 22.1848 14.3514 21.7313 16.0555C21.2778 17.7597 20.274 19.2662 18.8759 20.3409C17.4778 21.4157 15.7638 21.9983 14.0003 21.9983C12.2369 21.9983 10.5228 21.4157 9.12474 20.3409C7.72664 19.2662 6.72281 17.7597 6.26935 16.0555C5.81588 14.3514 5.93819 12.5451 6.61726 10.9177C7.29633 9.29024 8.4941 7.93276 10.0243 7.05633L10.531 3.00299C10.6116 2.35793 10.9251 1.76453 11.4125 1.33436C11.8998 0.904178 12.5276 0.666851 13.1777 0.666992H14.823ZM3.33366 12.667C3.68728 12.667 4.02642 12.8075 4.27647 13.0575C4.52652 13.3076 4.66699 13.6467 4.66699 14.0003C4.66699 14.3539 4.52652 14.6931 4.27647 14.9431C4.02642 15.1932 3.68728 15.3337 3.33366 15.3337H2.00033C1.6467 15.3337 1.30756 15.1932 1.05752 14.9431C0.807468 14.6931 0.666992 14.3539 0.666992 14.0003C0.666992 13.6467 0.807468 13.3076 1.05752 13.0575C1.30756 12.8075 1.6467 12.667 2.00033 12.667H3.33366ZM26.0003 12.667C26.3539 12.667 26.6931 12.8075 26.9431 13.0575C27.1932 13.3076 27.3337 13.6467 27.3337 14.0003C27.3337 14.3539 27.1932 14.6931 26.9431 14.9431C26.6931 15.1932 26.3539 15.3337 26.0003 15.3337H24.667C24.3134 15.3337 23.9742 15.1932 23.7242 14.9431C23.4741 14.6931 23.3337 14.3539 23.3337 14.0003C23.3337 13.6467 23.4741 13.3076 23.7242 13.0575C23.9742 12.8075 24.3134 12.667 24.667 12.667H26.0003ZM23.4283 4.57366C23.6783 4.8237 23.8187 5.16277 23.8187 5.51633C23.8187 5.86988 23.6783 6.20896 23.4283 6.45899L22.4857 7.40166C22.3627 7.52901 22.2155 7.63058 22.0529 7.70046C21.8902 7.77034 21.7152 7.80712 21.5382 7.80866C21.3612 7.8102 21.1856 7.77646 21.0217 7.70942C20.8579 7.64238 20.709 7.54338 20.5838 7.41819C20.4586 7.293 20.3596 7.14413 20.2926 6.98026C20.2255 6.8164 20.1918 6.64083 20.1933 6.46379C20.1949 6.28675 20.2316 6.11179 20.3015 5.94912C20.3714 5.78645 20.473 5.63932 20.6003 5.51633L21.543 4.57366C21.793 4.3237 22.1321 4.18328 22.4857 4.18328C22.8392 4.18328 23.1783 4.3237 23.4283 4.57366ZM6.45766 4.57366L7.40033 5.51633C7.6372 5.76893 7.76651 6.10378 7.76088 6.45002C7.75526 6.79626 7.61515 7.12674 7.3702 7.37151C7.12525 7.61629 6.79468 7.75617 6.44843 7.76154C6.10218 7.76692 5.76743 7.63738 5.51499 7.40033L4.57233 6.45766C4.33545 6.20506 4.20615 5.87021 4.21177 5.52397C4.21739 5.17772 4.3575 4.84725 4.60245 4.60247C4.8474 4.35769 5.17797 4.21782 5.52422 4.21244C5.87047 4.20706 6.20523 4.33661 6.45766 4.57366ZM14.823 3.33366H13.1777L12.8443 6.00033H15.1563L14.823 3.33366Z" fill="black" />
+                                    </svg>
+                                </div>
+                                <div class="rules_item-text"> On-the-ground solutions and implementation </div>
+                            </div>
+                            <div class="rules_item">
+                                <div class="rules_border">
+                                    <svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666992 24V5.33333C0.666992 2.81867 0.666992 1.56267 1.44833 0.781333C2.22966 -7.94729e-08 3.48566 0 6.00033 0H19.3337C20.443 0 21.3043 -6.70552e-08 22.0057 0.0359999C20.5378 0.198786 19.1815 0.897239 18.1965 1.99765C17.2114 3.09806 16.6669 4.52311 16.667 6V10.6667L16.535 23.956L12.667 22.6667L8.66699 24L4.66699 22.6667L0.666992 24ZM26.0003 10.6667H19.3337V6C19.3337 5.11595 19.6848 4.2681 20.31 3.64298C20.9351 3.01786 21.7829 2.66667 22.667 2.66667C23.551 2.66667 24.3989 3.01786 25.024 3.64298C25.6491 4.2681 26.0003 5.11595 26.0003 6V10.6667ZM3.33366 5.33333C3.33366 4.97971 3.47413 4.64057 3.72418 4.39052C3.97423 4.14048 4.31337 4 4.66699 4H12.667C13.0206 4 13.3598 4.14048 13.6098 4.39052C13.8598 4.64057 14.0003 4.97971 14.0003 5.33333C14.0003 5.68696 13.8598 6.02609 13.6098 6.27614C13.3598 6.52619 13.0206 6.66667 12.667 6.66667H4.66699C4.31337 6.66667 3.97423 6.52619 3.72418 6.27614C3.47413 6.02609 3.33366 5.68696 3.33366 5.33333ZM3.33366 10.6667C3.33366 10.313 3.47413 9.97391 3.72418 9.72386C3.97423 9.47381 4.31337 9.33333 4.66699 9.33333H7.33366C7.68728 9.33333 8.02642 9.47381 8.27647 9.72386C8.52652 9.97391 8.66699 10.313 8.66699 10.6667C8.66699 11.0203 8.52652 11.3594 8.27647 11.6095C8.02642 11.8595 7.68728 12 7.33366 12H4.66699C4.31337 12 3.97423 11.8595 3.72418 11.6095C3.47413 11.3594 3.33366 11.0203 3.33366 10.6667ZM3.33366 16C3.33366 15.6464 3.47413 15.3072 3.72418 15.0572C3.97423 14.8071 4.31337 14.6667 4.66699 14.6667H10.0003C10.3539 14.6667 10.6931 14.8071 10.9431 15.0572C11.1932 15.3072 11.3337 15.6464 11.3337 16C11.3337 16.3536 11.1932 16.6928 10.9431 16.9428C10.6931 17.1929 10.3539 17.3333 10.0003 17.3333H4.66699C4.31337 17.3333 3.97423 17.1929 3.72418 16.9428C3.47413 16.6928 3.33366 16.3536 3.33366 16Z" fill="black" />
+                                    </svg>
+                                </div>
+                                <div class="rules_item-text"> Rules & standards for the 21st century </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rules_image">
+                        <img src="./img/rules1.png" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="whyy">
+            <div class="container mw_1304">
+                <div class="whyy_bottom">
+                    <div class="whyy_circle-1"></div>
+                    <div class="whyy_circle-3"></div>
+                    <div class="whyy_flex">
+                        <div class="whyy_text-one">
+                            <div class="whyy_circle-2"></div> Why We Do It
+                        </div>
+                        <div class="whyy_text-two"> The private sector has the power to change the world for the better. Global trade and investment drives competitiveness, promotes fairness, creates commercial opportunities, reduces global poverty, and benefits communities, workers and consumers. The prosperity and opportunity this creates around the world helps maintain global stability and security, or in other words, peace. We are the voice of the real economy. We have the legacy, expertise, knowledge and global network to get things done. </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="how">
+            <div class="container mw_1224">
+                <div class="how_top">
+                    <div class="how_top-one">How we do it</div>
+                    <div class="how_top-two"> ICC has unrivalled expertise, knowledge and a network, unlike any other institution in the world. We are the voice and driver of businesses everywhere. From start-ups to multinationals. We speak up for the real economy with a bold and independent voice. ICC is the gold standard for world business, and we have been so for over 100 years. Everything ICC does, drives a more peaceful, more sustainable and more prosperous future for all. </div>
+                </div>
+                <!-- <div class="how_center">
+                    <div class="how_min">
+                        <div class="how_box">
+                            <div class="how_item2">
+                                <div class="how_bg" style="background: #afcb3a"></div>
+                                <div class="how_item2-text">
+                                    <span>Make trade work for people and our planet</span>
+                                </div>
+                            </div>
+                            <div class="how_item2">
+                                <div class="how_bg" style="background: #009984"></div>
+                                <div class="how_item2-text">
+                                    <span>Make action on climate change everyone’s business</span>
+                                </div>
+                            </div>
+                            <div class="how_item2">
+                                <div class="how_bg" style="background: #96c2e9"></div>
+                                <div class="how_item2-text">
+                                    <span>Make technology work for all </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="how_box2">
+                            <div class="how_item2">
+                                <div class="how_bg" style="background: #96c2e9"></div>
+                                <div class="how_item2-text">
+                                    <span>Make technology work for all </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="how_box1">
+                            <div class="how_item2">
+                                <div class="how_bg" style="background: #f7a512"></div>
+                                <div class="how_item2-text">
+                                    <span>Stop the global rise in inquelaity</span>
+                                </div>
+                            </div>
+                            <div class="how_item2">
+                                <div class="how_bg" style="background: #00b5e5"></div>
+                                <div class="how_item2-text">
+                                    <span> Lead for the long term </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="how_list">
+                    <div class="item" style="background: #AFCB3A;">Make trade work for people and our planet</div>
+                    <div class="item" style="background: #009984;">Make action on climate change everyone’s business</div>
+                    <div class="item" style="background: #96C2E9;">Make technology work for all</div>
+                    <div class="item" style="background: #F7A512;">Stop the global rise in inquelaity</div>
+                    <div class="item" style="background: #00B5E5;">Lead for the long term</div>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <div class="container mw_1224">
+                <div class="small_heading" style="margin-bottom: 20px;">Our Team</div>
+                <div class="team">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-slide">
+                            <div class="team_product">
+                                <div class="team_img">
+                                    <img src="./img/team1.png" alt="" />
+                                </div>
+                                <div class="box_text">
+                                    <div class="text-one">CEO</div>
+                                    <div class="text-two"> Sheikh Khalifa bin Jassim Al Thani </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        var swiper = new Swiper(".team .mySwiper", {
+                            slidesPerView: "auto",
+                            spaceBetween: 30,
+                            pagination: {
+                                el: ".swiper-pagination",
+                                clickable: true,
+                            },
+                        });
+                    </script>
+                    <div class="team_end">
+                        <a href="" class="button_black">
+                            <span>Check All</span>
+                            <span class="arrow">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 9.99999C2.5 9.75135 2.59877 9.51289 2.77459 9.33708C2.9504 9.16126 3.18886 9.06249 3.4375 9.06249L14.3 9.06249L10.275 5.03749C10.1094 4.85977 10.0192 4.62471 10.0235 4.38184C10.0278 4.13896 10.1262 3.90723 10.298 3.73546C10.4697 3.5637 10.7015 3.46531 10.9443 3.46102C11.1872 3.45674 11.4223 3.54689 11.6 3.71249L17.225 9.33749C17.4006 9.51327 17.4992 9.75155 17.4992 9.99999C17.4992 10.2484 17.4006 10.4867 17.225 10.6625L11.6 16.2875C11.4223 16.4531 11.1872 16.5432 10.9443 16.539C10.7015 16.5347 10.4697 16.4363 10.298 16.2645C10.1262 16.0928 10.0278 15.861 10.0235 15.6181C10.0192 15.3753 10.1094 15.1402 10.275 14.9625L14.3 10.9375L3.4375 10.9375C3.18886 10.9375 2.9504 10.8387 2.77459 10.6629C2.59877 10.4871 2.5 10.2486 2.5 9.99999Z" fill="#007DFF"></path>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="discover">
+            <div class="container mw_1224">
+                <div class="discover_max">
+                    <div class="discover_text">
+                        <div class="discover_text-one">Discover Our History</div>
+                        <div class="discover_text-two"> ICC was founded in the aftermath of the First World War when no world system of rules governed trade, investment, finance or commercial relations. In 1919, a handful of entrepreneurs decided to create an organisations that would represent business everywhere. The group of industrialists, financiers, and traders were determined to bring hope to a world still devastated by war. they resolved to replace fear and suspicion with a new spirit of cooperation. They founded the International Chamber of Commerce and called themselves the Merchants of Peace. Without waiting for governments to fill the gap, ICC’s founders acted on their conviction that the private sector is best qualified to set global standards for business. A century later, ICC issued its Declaration on the Next Century of Global Business setting out a vision to shape the future of global business for the next century, embracing ICC’s renewed purpose to enable business worldwide to secure peace, prosperity and opportunity for all. </div>
+                    </div>
+                    <div class="discover_image">
+                        <img src="./img/discover01.png" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="history">
+            <div class="container mw_1224">
+                <div class="history-box">
+                    <div class="circle"></div>
+                    <div class="slider__timeline">
+                        <div class="item"><span>1919</span></div>
+                        <div class="item"><span>1923</span></div>
+                        <div class="item"><span>1933</span></div>
+                        <div class="item"><span>1936</span></div>
+                        <div class="item"><span>1944</span></div>
+                        <div class="item"><span>1965</span></div>
+                        <div class="item"><span>1989</span></div>
+                        <div class="item"><span>1999</span></div>
+                        <div class="item"><span>2016</span></div>
+                        <div class="item"><span>2024</span></div>
+                    </div>
+
+                    <div class="box__slider__paragraph">
+                        <div class="slider__paragraph">
+                            <div class="item">
+                                <div class="item__img">
+                                    <img src="img/discover01.png" alt="Image">
+                                </div>
+                                <div class="item__text">ICC Establishes the International Court of Arbitration</div>
+                            </div>
+                            <div class="item">
+                                <div class="item__img">
+                                    <img src="img/banner.jpg" alt="Image">
+                                </div>
+                                <div class="item__text">ICC Establishes the International Court of Arbitration V2</div>
+                            </div>
+                            <div class="item">
+                                <div class="item__img">
+                                    <img src="img/banner3.jpg" alt="Image">
+                                </div>
+                                <div class="item__text">ICC Establishes the International Court of Arbitration V4</div>
+                            </div>
+                            <div class="item">
+                                <div class="item__img">
+                                    <img src="img/discover01.png" alt="Image">
+                                </div>
+                                <div class="item__text">ICC Establishes the International Court of Arbitration</div>
+                            </div>
+                            <div class="item">
+                                <div class="item__img">
+                                    <img src="img/discover01.png" alt="Image">
+                                </div>
+                                <div class="item__text">ICC Establishes the International Court of Arbitration</div>
+                            </div>
+                            <div class="item">
+                                <div class="item__img">
+                                    <img src="img/discover01.png" alt="Image">
+                                </div>
+                                <div class="item__text">ICC Establishes the International Court of Arbitration</div>
+                            </div>
+                        </div>                        
+                        <div class="timeline__nav">
+                            <div class="timeline__nav__prev">
+                                <svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.91609 19.3789C10.0757 19.3789 10.239 19.3158 10.3614 19.1934C10.6063 18.9484 10.6063 18.5477 10.3614 18.3027L1.97842 9.91973L10.239 1.65918C10.4839 1.41426 10.4839 1.01348 10.239 0.768555C9.99404 0.523632 9.59326 0.523632 9.34834 0.768555L0.63877 9.47441C0.393848 9.71934 0.393848 10.1201 0.63877 10.365L9.46709 19.1934C9.59326 19.3195 9.75281 19.3789 9.91609 19.3789Z" fill="#3D3D3D"/>
+                                </svg>                                                                     
+                            </div>
+                            <div class="timeline__nav__next">
+                                <svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.08391 0.585937C0.924335 0.585937 0.761035 0.649023 0.638574 0.771484C0.393652 1.01641 0.393652 1.41719 0.638574 1.66211L9.02158 10.0451L0.761033 18.3057C0.516112 18.5506 0.516112 18.9514 0.761033 19.1963C1.00595 19.4412 1.40674 19.4412 1.65166 19.1963L10.3612 10.4904C10.6062 10.2455 10.6062 9.84473 10.3612 9.5998L1.53291 0.771484C1.40674 0.645312 1.24719 0.585937 1.08391 0.585937Z" fill="#3D3D3D"/>
+                                </svg>                                                                     
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $(document).ready(function () {
+                jQuery('.slider__paragraph').slick({
+                    dots: false,
+                    infinite: false,
+                    slidesToShow: 1,
+                    speed: 300,
+                    fade: true, 	
+                    swipe: true,
+                    asNavFor: '.slider__timeline',
+                    prevArrow: jQuery('.timeline__nav__prev'),
+                    nextArrow: jQuery('.timeline__nav__next'),
+                });
+                jQuery('.slider__timeline').slick({
+                    asNavFor: '.slider__paragraph',
+                    dots: false,
+                    infinite: false,
+                    speed: 300,
+                    slidesToShow: 5,
+                    responsive: [
+                        {
+                            breakpoint: 1220,
+                            settings: {
+                                slidesToShow: 4,
+                            }
+                        },
+                        {
+                            breakpoint: 767,
+                            settings: {
+                                slidesToShow: 3,
+                            }
+                        },
+                        {
+                            breakpoint: 450,
+                            settings: {
+                                slidesToShow: 2,
+                            }
+                        }
+                    ]
+                });
+
+                jQuery(document).on('click', '.slider__timeline .item', function(event) {
+                    event.preventDefault();
+                    jQuery('.slider__timeline').slick('slickGoTo', jQuery(this).index());
+                });
             });
-          </script>
-        </div>
-        <div class="team_end">
-          <a href="" class="button_black">
-            <span>Check All</span>
-            <span class="arrow">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M2.5 9.99999C2.5 9.75135 2.59877 9.51289 2.77459 9.33708C2.9504 9.16126 3.18886 9.06249 3.4375 9.06249L14.3 9.06249L10.275 5.03749C10.1094 4.85977 10.0192 4.62471 10.0235 4.38184C10.0278 4.13896 10.1262 3.90723 10.298 3.73546C10.4697 3.5637 10.7015 3.46531 10.9443 3.46102C11.1872 3.45674 11.4223 3.54689 11.6 3.71249L17.225 9.33749C17.4006 9.51327 17.4992 9.75155 17.4992 9.99999C17.4992 10.2484 17.4006 10.4867 17.225 10.6625L11.6 16.2875C11.4223 16.4531 11.1872 16.5432 10.9443 16.539C10.7015 16.5347 10.4697 16.4363 10.298 16.2645C10.1262 16.0928 10.0278 15.861 10.0235 15.6181C10.0192 15.3753 10.1094 15.1402 10.275 14.9625L14.3 10.9375L3.4375 10.9375C3.18886 10.9375 2.9504 10.8387 2.77459 10.6629C2.59877 10.4871 2.5 10.2486 2.5 9.99999Z"
-                  fill="#007DFF"
-                ></path>
-              </svg>
-            </span>
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="discover">
-      <div class="container mw_1224">
-        <div class="discover_max">
-          <div class="discover_text">
-            <div class="discover_text-one">Discover Our History</div>
-            <div class="discover_text-two">
-              ICC was founded in the aftermath of the First World War when no
-              world system of rules governed trade, investment, finance or
-              commercial relations. In 1919, a handful of entrepreneurs decided
-              to create an organisations that would represent business
-              everywhere. The group of industrialists, financiers, and traders
-              were determined to bring hope to a world still devastated by war.
-              they resolved to replace fear and suspicion with a new spirit of
-              cooperation. They founded the International Chamber of Commerce
-              and called themselves the Merchants of Peace. Without waiting for
-              governments to fill the gap, ICC’s founders acted on their
-              conviction that the private sector is best qualified to set global
-              standards for business. A century later, ICC issued its
-              Declaration on the Next Century of Global Business setting out a
-              vision to shape the future of global business for the next
-              century, embracing ICC’s renewed purpose to enable business
-              worldwide to secure peace, prosperity and opportunity for all.
-            </div>
-          </div>
-          <div class="discover_image">
-            <img src="./img/discover01.png" alt="" />
-          </div>
-        </div>
-      </div>
-    </div>
-    <footer>
-      <div class="footer">
-        <div class="container">
-          <div class="footer_max">
-            <div class="footer_top">
-              <div class="footer_child">
-                <div class="footer_heading">
-                  International Chamber of Commerce Qatar
+        </script>
+        <footer>
+            <div class="footer">
+                <div class="container">
+                    <div class="footer_max">
+                        <div class="footer_top">
+                            <div class="footer_child">
+                                <div class="footer_heading"> International Chamber of Commerce Qatar </div>
+                                <div class="footer_stext"> The World’s Leading Arbitration Institution </div>
+                            </div>
+                            <div class="footer_child">
+                                <div class="footer_heading">Quick Links</div>
+                                <ul>
+                                    <li>
+                                        <a href="">About Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Resources For Business</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Policy Commissions</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Events</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Membership</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Gallery</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Special Projects</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Newsroom</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Incoterms</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Contact Us</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer_child">
+                                <div class="footer_heading">Get email alert</div>
+                                <div class="footer_stext"> Stay up-to-date with all ICC Qatar news information </div>
+                                <a href="#" class="footer_button" style="width: 100%">Sign Up Now</a>
+                            </div>
+                        </div>
+                        <div class="footer_bottom">
+                            <div class="footer_bottom-text"> © 2024 | All Rights Reserved. Crafted by </div>
+                            <div class="flex_bottom">
+                                <a href="#">
+                                    <img src="img/social-youtube.svg" alt="" />
+                                </a>
+                                <a href="">
+                                    <img src="./img/ig.svg" alt="" />
+                                </a>
+                                <a href="">
+                                    <img src="./img/Facebook.svg" alt="" />
+                                </a>
+                                <a href="">
+                                    <img src="./img/Twitter.svg" alt="" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="footer_stext">
-                  The World’s Leading Arbitration Institution
-                </div>
-              </div>
-              <div class="footer_child">
-                <div class="footer_heading">Quick Links</div>
-                <ul>
-                  <li>
-                    <a href="">About Us</a>
-                  </li>
-                  <li>
-                    <a href="">Resources For Business</a>
-                  </li>
-                  <li>
-                    <a href="">Policy Commissions</a>
-                  </li>
-                  <li>
-                    <a href="">Events</a>
-                  </li>
-                  <li>
-                    <a href="">Membership</a>
-                  </li>
-                  <li>
-                    <a href="">Gallery</a>
-                  </li>
-                  <li>
-                    <a href="">Special Projects</a>
-                  </li>
-                  <li>
-                    <a href="">Newsroom</a>
-                  </li>
-                  <li>
-                    <a href="">Incoterms</a>
-                  </li>
-                  <li>
-                    <a href="">Contact Us</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="footer_child">
-                <div class="footer_heading">Get email alert</div>
-                <div class="footer_stext">
-                  Stay up-to-date with all ICC Qatar news information
-                </div>
-                <a href="#" class="footer_button" style="width: 100%"
-                  >Sign Up Now</a
-                >
-              </div>
             </div>
-            <div class="footer_bottom">
-              <div class="footer_bottom-text">
-                © 2024 | All Rights Reserved. Crafted by
-              </div>
-              <div class="flex_bottom">
-                <a href="#">
-                  <img src="img/social-youtube.svg" alt="" />
-                </a>
-                <a href="">
-                  <img src="./img/ig.svg" alt="" />
-                </a>
-                <a href="">
-                  <img src="./img/Facebook.svg" alt="" />
-                </a>
-                <a href="">
-                  <img src="./img/Twitter.svg" alt="" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </body>
+        </footer>
+    </body>
 </html>
